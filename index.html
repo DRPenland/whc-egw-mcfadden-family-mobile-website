@@ -6,65 +6,76 @@
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <title>William Henry Clay & Ellen Golden Watts McFadden Family</title>
 </head>
-<body>
-    <!--The navigation is physically above the header in the mockup. The McFadden family crest logo and navigation links go here.-->
-    <nav>
-        <img src="images/home-page/mcfadden-crest.png" alt="McFadden Crest" width="125" height="175"/>
-        <p>&#9776;</p>
-    </nav>
-    <header>
-        <!--This is where title of the website appears.-->
-        <h1 id="top">William Henry Clay</h1>
-            <h1>&</h1>
-            <h1>Ellen Golden Watts</h1>
-            <h1 class="surname">McFadden</h1>
-            <h1>Family</h1>
-    </header>
-    <!--Main section of the body of the home page goes between main tags.-->
-    <main>
-        <section>
-            <!--This is section 1 for hero image of the Old Mill in the Blue Ridge Mountains. Also putting figcaption below it.-->
-            <div class="image-banner">
+<!--Add div to entire body so can use flex-box commands with elements. -->
+<div>
+    <body>
+        <header>
+            <!--The navigation is physically above the header in the mockup. The McFadden family crest logo and navigation links go here.-->
+            <nav> 
+                <img src="images/home-page/mcfadden-crest.png" alt="McFadden Crest" width="75" height="100">
+                <label>&#9776;</label>
+                <input type="checkbox" id="hamburger" name="hamburger">
+                <ul>
+                    <li>HOME</li>
+                    <li>PATRIARCH</li>
+                    <li>MATRIARCH</li>
+                    <li>CHILDREN</li>
+                </ul>
+            </nav>
+                <!--This is where title of the website appears.-->
+                <h1 id="top">William Henry Clay</h1>
+                <h1>&</h1>
+                <h1>Ellen Golden Watts</h1>
+                <h1 class="surname">McFadden</h1>
+                <h1>Family</h1>
+        </header>
+        <!--Main section of the body of the home page goes between main tags.-->
+        <main>
+            <section>
+                <!--This is section 1 for hero image of the Old Mill in the Blue Ridge Mountains. Also putting figcaption below it.-->
+                <div class="image-banner">
                 <figure>
-                    <img src="images/home-page/pexels-daniel-shapiro-17946182.jpg" alt="Old Mill in Blue Ridge Mountains" width="1525" height="430"/>
+                    <img src="images/home-page/pexels-daniel-shapiro-17946182.jpg" alt="Old Mill in Blue Ridge Mountains" width="360" height="198">
                     <figcaption>Photo Courtesy of Daniel Shapiro of Pexels</figcaption>
                 </figure>
                 </div>
-        </section>
-        <section class="section2">
-            <!--This is section 2 for the Family Summary.  This background is light green.  Contains family summary header and paragraph.-->
-            <!--A scroll up/down icon is placed at the bottom right of the family summary.-->
-            <h3>FAMILY SUMMARY</h3>
-            <!--This is where family summary paragraph goes.-->
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta officia, reprehenderit qui deleniti rerum nam esse. Quae maxime aspernatur quis enim quisquam blanditiis eius dignissimos nam aliquid fuga, rerum nobis aut. Quam neque incidunt ducimus quo. Aut laborum accusantium optio nihil tempore! Quae pariatur ea laborum, asperiores sunt molestiae!</p>
-        </section>
-        <section class="section3">
-            <div>
-                <figure>
-                    <!--This is section 3 for the map of VA Counties the family lived in.-->
-                    <img src="images/home-page/mymap.png" alt="Map of Virginia with Rockbridge and Bath Counties hilighted" width="486" height="143"/>
-                    <figcaption>Map created using mapgoose.com/us/virginia</figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="section4">
-            <!--This is section 4.  The background is dark green.  Contains location header and location summary.-->
-            <h3>LOCATION</h3>
-            <!--This is where the location summary goes.-->
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus magni necessitatibus voluptatibus, quia officia, nisi minima distinctio placeat iusto facere perferendis eaque ipsum voluptates fugiat recusandae cupiditate dolore quis veniam voluptatem. Aliquid iure dignissimos sed?</p>
-        </section>    
-        <section class="section5">
-            <!--This is section 5.  The background is light green.  Contains the religion header and religion summary.-->
-            <h3>RELIGION</h3>
-            <!--This is where religion summary goes.-->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempore, repellendus ipsam facere soluta dolor hic adipisci veritatis magni placeat, voluptatibus blanditiis? Ducimus totam accusamus nihil voluptatibus non, maiores ipsam tempora corrupti ab, atque placeat.</p>
-        </section>
-        <footer>
-            <!--This section is the footer.  The background color is light gray. It contains back to top link and contact form link.-->
-            <div>
+            </section>
+            <section class="section2">
+                <!--This is section 2 for the Family Summary.  This background is light green.  Contains family summary header and paragraph.-->
+                <!--A scroll up/down icon is placed at the bottom right of the family summary.-->
+                <h3>FAMILY SUMMARY</h3>
+                <!--This is where family summary paragraph goes.-->
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi dicta officia, reprehenderit qui deleniti rerum nam esse. Quae maxime aspernatur quis enim quisquam blanditiis eius dignissimos nam aliquid fuga, rerum nobis aut. Quam neque incidunt ducimus quo. Aut laborum accusantium optio nihil tempore! Quae pariatur ea laborum, asperiores sunt molestiae!</p>
+                <button class="scroll-indicator">&lt;</button>
+            </section>
+            <section class="section3">
+                <div>
+                    <figure>
+                        <!--This is section 3 for the map of VA Counties the family lived in.-->
+                        <img src="images/home-page/mymap.png" alt="Map of Virginia with Rockbridge and Bath Counties hilighted" width="360" height="198">
+                        <figcaption>Map created using mapgoose.com/us/virginia</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <section class="section4">
+                <!--This is section 4.  The background is dark green.  Contains location header and location summary.-->
+                <h3>LOCATION</h3>
+                <!--This is where the location summary goes.-->
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus magni necessitatibus voluptatibus, quia officia, nisi minima distinctio placeat iusto facere perferendis eaque ipsum voluptates fugiat recusandae cupiditate dolore quis veniam voluptatem. Aliquid iure dignissimos sed?</p>
+            </section>    
+            <section class="section5">
+                <!--This is section 5.  The background is light green.  Contains the religion header and religion summary.-->
+                <h3>RELIGION</h3>
+                <!--This is where religion summary goes.-->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempore, repellendus ipsam facere soluta dolor hic adipisci veritatis magni placeat, voluptatibus blanditiis? Ducimus totam accusamus nihil voluptatibus non, maiores ipsam tempora corrupti ab, atque placeat.</p>
+            </section>
+            <footer>
+                <!--This section is the footer.  The background color is light gray. It contains back to top link and contact form link.-->
+                <div>
                 <p class ="top"><a href="#top">BACK TO TOP</a></p><p class="contact"><a href="#">CONTACT US HERE!</a></p>
-            </div>
-        </footer>
-    </main>
-</body>
+                </div>
+            </footer>
+        </main>
+    </body>
+</div>
 </html>
