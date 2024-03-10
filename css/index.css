@@ -58,6 +58,8 @@ header {
     display: none;
     position: absolute;
     top: 20px;
+    width: 30%;
+    margin: 5%;
 }
 
 /*This code says when checkmark is checked, I want you to find next sibling which is the ul and I want you to display it.*/
@@ -73,7 +75,7 @@ header nav {
 }
 
 header nav img{
-    /* width: 50%; */
+    width: 30%;
     /* height: 300px; */
     margin: 3% 3%;
     padding-right: 5%;
@@ -108,6 +110,7 @@ header nav ul li {
     list-style-type: none;
     padding: 2% 0;
 }
+
 header h1 {font-family: 'Croissant One', 'Times New Roman', serif;
     font-size: 2.25rem;
     font-weight: 900;
@@ -288,6 +291,9 @@ main {
     text-align: left;
 }
 
+.section5 {
+    height: 275px;
+}
 .section5 p{
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1rem;
@@ -320,7 +326,7 @@ footer div {
 
 .top a {
     color: #406833;
-  margin-right: 8%;
+    margin-right: 8%;
 }
 
 .top a:hover{
@@ -344,23 +350,78 @@ footer div {
 
 /* MEDIA QUERIES FOR HOMEPAGE STARTS HERE*/
 
-body {
-    /*default styles here, targets mobile first*/
-}
+/*default styles here, targets mobile first for screens under 480px*/
+
 
 @media screen and (min-width:480px) {
-    .image-banner img {
-        width: 100%
+    .scroll-indicator {
+        position: relative;
+        top: 25px;
+        left: 390px;
     }
 }
 
 
-@media screen and (min-width:760px) {
+@media screen and (min-width:744px) {
+        header nav img {
+            width: 25%;
+        }
 
-}
+        #hamburger {
+            position: relative;
+            top: 5px;
+            margin-right: 3%;
+        }
 
-     
-}media screen and (min-width: 1024px) {
+        header h1 {
+        font-size: 3.25rem;
+        height: 120px;
+        }
+
+        .surname {
+            font-size: 3.75rem;
+        }
+
+        .image-banner img{
+            position: relative;
+            top: 220px;
+        }
+
+        .image-banner figcaption {
+             position: relative;
+             top: 195px;
+        }
+
+        .scroll-indicator {
+                position: relative;
+                top: 25px;
+                left: 650px;
+        }
+        
+        .section4 p {
+            position: relative;
+            top: -10px;
+            padding: 5%;
+            margin-top: 3%;
+        }
+
+        .section5 p{
+            position: relative;
+            bottom: 25px;
+        }
+
+        .top a {
+            position: relative;
+            bottom: 30px;
+        }
+
+        .contact a{
+            position: relative;
+            bottom: 30px;
+        }
+    }
+
+@media screen and (min-width: 1024px) {
     nav ul {
         display: flex;
         flex-direction: row;
