@@ -48,7 +48,7 @@ div {
 }
 
 header {
-    height: 500px;
+    height: 225px;
     width: 100%;
     z-index: 999;
 }
@@ -70,12 +70,12 @@ header {
 header nav {
     background-color: #d9d9d9;
     width: 100%;
-    height: 140px;
+    height: 150px;
     font-size:3rem;
 }
 
 header nav img{
-    width: 30%;
+    width: 25%;
     /* height: 300px; */
     margin: 3% 3%;
     padding-right: 5%;
@@ -111,20 +111,26 @@ header nav ul li {
     padding: 2% 0;
 }
 
-header h1 {font-family: 'Croissant One', 'Times New Roman', serif;
+header h1 {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Croissant One', 'Times New Roman', serif;
     font-size: 2.25rem;
     font-weight: 900;
     /* line-height: 1; */
     color: #d9d9d9;
     text-align: center;
     background-color: #1B341e;
-    height: 90px;
+    width: 100%;
+    height: 190px;
     padding: 5%;
 }
 
- .surname {
+ /* .surname {
     font-size: 3rem;
-}
+} */
+
 main {
     background-color: #A5BF6B;
     width: 100%;
@@ -136,7 +142,7 @@ main {
     justify-content: center;
     position: relative;
     top: 90px;
-    /* height: 30%; */
+    height: 500px;
     width: 100%;
     margin: 0 auto;
     /* background-image: url(../images/home-page/pexels-daniel-shapiro-17946182.jpg);
@@ -153,13 +159,15 @@ main {
     font-style: italic;
     padding: 5%;
     text-align: center;
+    position: relative;
+    top: 90px;
 }
 
 /* Section 2 Starts Here.  Family Summary Section*/
 
 .section2 h3 {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
-    font-size: 1.25 rem;
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 700;
     display: flex;
@@ -173,7 +181,7 @@ main {
 }
 
 .section2 {
-    height: 335px;
+    height: 475px;
     width: 100%;
 }
 
@@ -209,21 +217,17 @@ main {
 
 .section3 {
     width: 100%;
-    height: 200px;
+    height: 220px;
 }
 
-.section3 div {
-    height: 500px;
-}
 
-.section3 div img{
+.section3 img{
     width: 100%;
-    /* height: 500px; */
-    margin: 0px;
+    height: 198px;
+    margin-bottom: 2%;
     padding: 0px;
-    border: 7px;
-    border-color: black;
-    border-style: solid;
+    border: 1px solid black;
+
 }
 
 .section3 figcaption {
@@ -232,14 +236,14 @@ main {
     font-style: italic;
     text-align: center;
     color: #a5bf6b;
-    padding: 5%;
+    padding: 3%;
 }
 
 /* Section 4 Location Information */
 
 .section4 {
     width: 100%;
-    height: 275px;
+    height: 325px;
     margin: auto;
     background-color: #1B341e;
 }
@@ -253,9 +257,11 @@ main {
     font-style: normal;
     font-weight: 700;
     position: relative;
-    top: 32px;
+    top: 40px;
     text-transform: uppercase;
-    padding: 5%;
+    padding-left: 5%;
+    padding-bottom: 3%;
+    margin: 3% 0;
     text-align: left;
 }
 
@@ -266,18 +272,19 @@ main {
     font-weight: 400;
     color: #a5bf6b;
     position: relative;
-    top: 20px;
-    padding: 5%;
+    top: 25px;
+    padding: 2%;
     height: 50px;
 }
 
 /* Section 5 about Religion */
 
 .section5 {
-    height: 265px;
+    height: 285px;
     width: 100%;
     margin: auto;
-    padding: 5%;
+    padding-left: 5%;
+    padding-bottom: 3%;
 }
 
 .section5 h3{
@@ -291,9 +298,6 @@ main {
     text-align: left;
 }
 
-.section5 {
-    height: 275px;
-}
 .section5 p{
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1rem;
@@ -352,8 +356,20 @@ footer div {
 
 /*default styles here, targets mobile first for screens under 480px*/
 
-
 @media screen and (min-width:480px) {
+   
+    h1 {
+        /* height: 200px; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap:wrap;
+    }
+
+    .image-banner figcaption {
+        position: relative;
+        top: 95px;
+   }
+
     .scroll-indicator {
         position: relative;
         top: 25px;
@@ -363,26 +379,55 @@ footer div {
 
 
 @media screen and (min-width:744px) {
-        header nav img {
-            width: 25%;
+   
+    .section2 h3 {
+        position: relative;
+        top: 120px;
+        margin-bottom: 3%;
         }
 
-        #hamburger {
+        header nav img {
+            width: 15%;
+            z-index: 999;
+            /* border: 1px solid red; */
+        }
+
+        header nav label {
+            display: none;
+        }
+
+        header nav {
+            height: 200px;
+        }
+
+        header nav ul {
+            display: flex;
+            flex-direction: row;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-decoration: underline;
+            justify-content: flex-end;
+            color: #406833;
             position: relative;
-            top: 5px;
-            margin-right: 3%;
+            bottom: 100px;
+            width: 80%;
+            margin-left: 18%;
+            /* border: 1px solid blue; */
+        }
+
+        header nav ul li {
+            margin-right: 5%;
         }
 
         header h1 {
-        font-size: 3.25rem;
-        height: 120px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap:wrap;
+            font-size: 3.25rem;
+             height: 285px;
         }
 
-        .surname {
-            font-size: 3.75rem;
-        }
-
-        .image-banner img{
+        .image-banner img {
             position: relative;
             top: 220px;
         }
@@ -394,10 +439,11 @@ footer div {
 
         .scroll-indicator {
                 position: relative;
-                top: 25px;
-                left: 650px;
+                top: 0px;
+                left: 680px;
         }
         
+    
         .section4 p {
             position: relative;
             top: -10px;
@@ -405,14 +451,20 @@ footer div {
             margin-top: 3%;
         }
 
+        .section5 h3 {
+            margin-left: -5%;
+        }
+        
         .section5 p{
             position: relative;
             bottom: 25px;
+            margin-left: -5%;
         }
 
         .top a {
             position: relative;
             bottom: 30px;
+
         }
 
         .contact a{
@@ -430,4 +482,141 @@ footer div {
     label {
         display: none;
     }
+
+    header h1 {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        font-size: 3.25rem;
+        height: 250px;
+    }
+
+    .image-banner img{
+        height: 300px;
+    }
+
+    .section2 h3 {
+        position: relative;
+        top: 100px;
+    }
+
+    .scroll-indicator {
+        position: relative;
+        top: -10px;
+        left: 925px;
+    }
+
+    .section3 {
+        width: 100%;
+        height: 198px;
+        background-color: #1B341e;
+        /* border: 1px solid red; */
+    }
+
+    .section3 img{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 198px;
+        margin: 0 auto;
+        padding: 0px;
+        border: 7px solid black;
+    }
+
+    .section4 p {
+      padding: 0%;
+      margin-left: 5%;
+    }
+
+
+    .section5 p {
+        padding: 0%;
+        margin-left: 0%;
+    }
+
+    .top a {
+        position: relative;
+        bottom: 55px;
+
+    }
+
+    .contact a{
+        position: relative;
+        bottom: 55px;
+    }
 }
+
+@media screen and (min-width: 1436px) {
+
+    header nav img {
+        width: 15%;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        font-size: 2rem;
+        text-decoration: underline;
+        justify-content: center;
+        position: relative;
+        bottom: 150px;
+        width: 80%;
+        margin-left: 18%;
+    }
+
+    .image-banner figcaption {
+        position: relative;
+        bottom: 35px;
+    }
+
+    /*Family Summary p command*/
+    .section2 p {
+        font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+        font-size: 1rem;
+        font-variant: normal;
+        font-weight: 400;
+        display: flex;
+        position: relative;
+        top: -15px;
+        color: black;
+        padding: 5%;
+        text-align: left;
+        margin: auto;
+      }
+
+      .scroll-indicator {
+        position: relative;
+        top: -65px;
+        left: 1350px;
+    }
+
+    .section3 div {
+        background-color: #1B341e;
+    }
+    .section3 div img{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 198px;
+        margin: 0 auto;
+        border: 7px solid black;
+    }
+
+    /*VA Map image*/
+    .section3 div img{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        height: 198px;
+        margin: 0 auto;
+        padding: 0px;
+        border: 7px solid black;
+    }
+
+    .section3 div figcaption {
+        position: relative; 
+        bottom: 30px;
+    }
+}
+
+
