@@ -13,7 +13,7 @@
             <!--The navigation is physically above the header in the mockup. The McFadden family crest logo and navigation links go here.-->
             <nav> 
                 <img src="images/home-page/mcfadden-crest.png" alt="McFadden Crest" width="75" height="100">
-                <label>&#9776;</label>
+                <label for="hamburger">&#9776;</label>
                 <input type="checkbox" id="hamburger" name="hamburger">
                 <ul>
                     <li>HOME</li>
@@ -45,8 +45,21 @@
                 <button class="scroll-indicator">&lt;</button>
             </section>
             <section class="section3">
-                <div>
-                    <figure>
+                <!--The div will serve as a flex container. This means
+                that we will need to create figures for each image and media
+                queries to change the flex-direction of the div. -->
+                <div class="maps">
+                    <figure class="map">
+                        <!--This is section 3 for the map of VA Counties the family lived in.-->
+                        <img src="images/home-page/mymap.png" alt="Map of VA with Rockbridge and Bath Counties hilited" width="750" height="198">
+                        <!-- <figcaption>Map created using mapgoose.com/us/virginia</figcaption> -->
+                    </figure>
+                    <figure class="map">
+                        <!--This is section 3 for the map of VA Counties the family lived in.-->
+                        <img src="images/home-page/mymap.png" alt="Map of VA with Rockbridge and Bath Counties hilited" width="750" height="198">
+                        <!-- <figcaption>Map created using mapgoose.com/us/virginia</figcaption> -->
+                    </figure>
+                    <figure class="map">
                         <!--This is section 3 for the map of VA Counties the family lived in.-->
                         <img src="images/home-page/mymap.png" alt="Map of VA with Rockbridge and Bath Counties hilited" width="750" height="198">
                         <figcaption>Map created using mapgoose.com/us/virginia</figcaption>
