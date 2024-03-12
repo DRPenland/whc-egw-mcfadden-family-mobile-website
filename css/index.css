@@ -42,6 +42,7 @@
     box-sizing: border-box;
 }
 
+/*Original CSS commands are set for mobile first screen width of 360px*/
 div {
     display: flex;
     flex-direction: column;
@@ -50,7 +51,7 @@ div {
 header {
     height: 225px;
     width: 100%;
-    z-index: 999;
+
 }
 
 /*display none for #hamburger makes checkbox disappear */
@@ -74,6 +75,7 @@ header nav {
     font-size:3rem;
 }
 
+/*header nav img is for McFadden crest logo*/
 header nav img{
     width: 25%;
     /* height: 300px; */
@@ -81,7 +83,7 @@ header nav img{
     padding-right: 5%;
 }
 
-
+/* header nav label is for hamburger menu icon only.*/
 header nav label{
     display: flex;
     justify-content: center;
@@ -97,6 +99,7 @@ header nav label{
     color: #406833;
 }
 
+/* Unordered list for navigation menu.*/
 /*Display none under header nav ul makes list disappear.*/
 header nav ul {
     display: flex;
@@ -104,6 +107,7 @@ header nav ul {
     align-items: center;
     background-color: #d9d9d9;
     display: none;
+    z-index: 999;
 }
 
 header nav ul li {
@@ -111,6 +115,7 @@ header nav ul li {
     padding: 2% 0;
 }
 
+/*Title of the website goes here.*/
 header h1 {
     display:flex;
     flex-direction: column;
@@ -123,7 +128,7 @@ header h1 {
     text-align: center;
     background-color: #1B341e;
     width: 100%;
-    height: 190px;
+    height: 500px;
     padding: 5%;
 }
 
@@ -132,17 +137,18 @@ header h1 {
 } */
 
 main {
-    background-color: #A5BF6B;
+    /* background-color: #A5BF6B; */
     width: 100%;
 }
 
+/*Hero image of Old Mill*/
 .image-banner img{
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
-    top: 90px;
-    height: 500px;
+    top: 125px;
+    height: 300px;
     width: 100%;
     margin: 0 auto;
     /* background-image: url(../images/home-page/pexels-daniel-shapiro-17946182.jpg);
@@ -152,7 +158,6 @@ main {
 }
 
 /* Photo Citation goes here as figcaption for Old Mill image */
-
  .image-banner figcaption {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 0.75rem;
@@ -161,10 +166,12 @@ main {
     text-align: center;
     position: relative;
     top: 90px;
+    /* border: 1px solid purple; */
 }
 
 /* Section 2 Starts Here.  Family Summary Section*/
 
+/*Family Summary section header*/
 .section2 h3 {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1.25rem;
@@ -176,15 +183,20 @@ main {
     top: 68px;
     color: #1b341e;
     text-transform: uppercase;
-    padding: 5%;
+    padding-left: 5%;
+    padding-top: 8%;
+    padding-bottom: 5%;
     text-align: left;
+    /* border: 1px solid red; */
 }
 
 .section2 {
     height: 475px;
     width: 100%;
+    background-color: #A5BF6B;
 }
 
+/*Family Summary paragraph*/
 .section2 p {
   font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
   font-size: 1rem;
@@ -196,20 +208,22 @@ main {
   color: black;
   padding: 5%;
   text-align: left;
-  margin: auto;
+  /* margin: auto; */
 }
 
+/*Scroll down indicator icon*/
 .scroll-indicator {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     position: relative;
-    top: 25px;
+    top: 20px;
     left: 273px;
     font-size: 2rem; 
     background-color:#1b341e;
     color: #A5BF6B;
     transform: rotate(270deg);
+   
 
 }
 
@@ -217,20 +231,21 @@ main {
 
 .section3 {
     width: 100%;
-    height: 220px;
+    /* height: 220px; */
+    background-color: #1b341e;
 }
 
-
+/*Map of State of VA*/
 .section3 img{
     width: 100%;
     height: 198px;
     margin-bottom: 2%;
     padding: 0px;
-    border: 1px solid black;
-
+    border: 5px solid black;
 }
 
-.section3 figcaption {
+/*Figcaption for Map of State of VA*/
+.map figcaption {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 0.75rem;
     font-style: italic;
@@ -239,17 +254,17 @@ main {
     padding: 3%;
 }
 
-/* Section 4 Location Information */
+/* Section 4 Location Information starts here.*/
 
 .section4 {
     width: 100%;
-    height: 325px;
-    margin: auto;
+    height: 315px;
     background-color: #1B341e;
+    /* border: 1px solid aqua; */
 }
 
 
-
+/*Location Section header*/
 .section4 h3 {
     color: #a5bf6b;
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
@@ -257,14 +272,16 @@ main {
     font-style: normal;
     font-weight: 700;
     position: relative;
-    top: 40px;
+    top: 45px;
     text-transform: uppercase;
+    padding-bottom: 5%;
     padding-left: 5%;
-    padding-bottom: 3%;
-    margin: 3% 0;
+    margin-right: 5%;
     text-align: left;
+    /* border: 1px solid red; */
 }
 
+/*Location section paragraph*/
 .section4 p {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1rem;
@@ -273,20 +290,22 @@ main {
     color: #a5bf6b;
     position: relative;
     top: 25px;
-    padding: 2%;
+    padding-top: 5%;
+    padding-left: 5%;
     height: 50px;
 }
 
-/* Section 5 about Religion */
+/* Section 5 about Religion starts here. */
 
 .section5 {
     height: 285px;
     width: 100%;
     margin: auto;
-    padding-left: 5%;
-    padding-bottom: 3%;
+    background-color: #A5BF6B;
+    /* border: 1px solid red; */
 }
 
+/*Religion section header*/
 .section5 h3{
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1.25rem;
@@ -296,8 +315,10 @@ main {
     color: #1b341e;
     padding: 5%;
     text-align: left;
+    /* border: 1px solid aqua; */
 }
 
+/*Religion section paragraph*/
 .section5 p{
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1rem;
@@ -305,7 +326,10 @@ main {
     font-weight: 400;
     color: black;
     padding: 5%;
+    /* border: 1px solid black; */
 }
+
+/*Footer section starts here.*/
 
 footer {
     background-color: #d9d9d9;
@@ -327,7 +351,7 @@ footer div {
     margin: 5%;
 }
 
-
+/*Back to Top Link*/
 .top a {
     color: #406833;
     margin-right: 8%;
@@ -338,11 +362,14 @@ footer div {
     background-color: #1b341e;
 }
 
+/*Contact Information */
 .contact {
     text-align: right;
     position: relative;
     bottom: 25px;
 }
+
+/*Contact information link*/
 .contact a {
     color: #406833;
 }
@@ -357,19 +384,8 @@ footer div {
 /*default styles here, targets mobile first for screens under 480px*/
 
 @media screen and (min-width:480px) {
-   
-    h1 {
-        /* height: 200px; */
-        display: flex;
-        flex-direction: column;
-        flex-wrap:wrap;
-    }
 
-    .image-banner figcaption {
-        position: relative;
-        top: 95px;
-   }
-
+    /*Positions scroll indicator icon*/
     .scroll-indicator {
         position: relative;
         top: 25px;
@@ -377,88 +393,81 @@ footer div {
     }
 }
 
-
+/*Tablet size screen starts at 744px*/
 @media screen and (min-width:744px) {
    
+    .section2 {
+        height: 375px;
+    }
+
+/*Family Summary Section header*/
     .section2 h3 {
-        position: relative;
-        top: 120px;
-        margin-bottom: 3%;
+        /* position: relative;
+        top: 120px; */
+        padding-top: 3%;
+        padding-bottom: 3%;
         }
 
         header nav img {
             width: 15%;
-            z-index: 999;
             /* border: 1px solid red; */
         }
 
-        header nav label {
-            display: none;
-        }
-
+ 
         header nav {
             height: 200px;
-        }
+        } 
 
-        header nav ul {
-            display: flex;
-            flex-direction: row;
-            font-size: 1.25rem;
-            font-weight: 900;
-            text-decoration: underline;
-            justify-content: flex-end;
-            color: #406833;
-            position: relative;
-            bottom: 100px;
-            width: 80%;
-            margin-left: 18%;
-            /* border: 1px solid blue; */
-        }
-
-        header nav ul li {
-            margin-right: 5%;
-        }
-
-        header h1 {
-            display: flex;
-            flex-direction: column;
-            flex-wrap:wrap;
-            font-size: 3.25rem;
-             height: 285px;
-        }
-
-        .image-banner img {
-            position: relative;
-            top: 220px;
-        }
-
-        .image-banner figcaption {
-             position: relative;
-             top: 195px;
-        }
 
         .scroll-indicator {
                 position: relative;
                 top: 0px;
-                left: 680px;
+                left: 670px;
         }
-        
-    
-        .section4 p {
-            position: relative;
-            top: -10px;
-            padding: 5%;
-            margin-top: 3%;
+         
+        /*VA Map div class .maps controls 3 map images.*/
+        .maps {
+            display: flex;
+            flex-direction: row;
         }
 
-        .section5 h3 {
-            margin-left: -5%;
-        }
-        
-        .section5 p{
+
+        /*Figcaption of 3rd .map. Flexbox command won't work on figcaption here.*/
+        .map figcaption {
+            width: 100%;
             position: relative;
-            bottom: 25px;
-            margin-left: -5%;
+            right: 250px;
+            /* border: 1px solid aqua; */
+        }
+
+        .section4 {
+            height: 250px;
+            margin: 0%;
+            /* border: 1px solid white; */
+        }
+   
+
+        /*Section 4 Location heading*/
+        .section4 h3 {
+            padding-top: 0%;
+            padding-bottom: 3%;
+            /* border: 1px solid red; */
+        }
+
+        /*Location Summary Paragraph*/
+        .section4 p {
+            padding-right: 5%;
+        }
+
+
+         /*Section 5 is the Religion section*/
+        .section5 {
+            height: 235px;
+        }
+
+         /*Section 5 Religion paragraph*/
+        .section5 p{
+            padding-top: 0%;
         }
 
         .top a {
@@ -473,150 +482,55 @@ footer div {
         }
     }
 
+    /*Screen Size of desktop starts with 1024px*/
 @media screen and (min-width: 1024px) {
-    nav ul {
-        display: flex;
-        flex-direction: row;
+
+    .image-banner figcaption{
+        padding: 5%;
     }
 
-    label {
-        display: none;
-    }
-
-    header h1 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap:nowrap;
-        font-size: 3.25rem;
-        height: 250px;
-    }
-
-    .image-banner img{
-        height: 300px;
+    /*Family Summary Section*/
+    .section2 {
+        height: 325px;
     }
 
     .section2 h3 {
-        position: relative;
-        top: 100px;
+       padding-top: 0%;
+       padding-bottom: 0%;
     }
 
     .scroll-indicator {
         position: relative;
         top: -10px;
-        left: 925px;
+        left: 945px;
     }
 
-    .section3 {
-        width: 100%;
-        height: 198px;
-        background-color: #1B341e;
-        /* border: 1px solid red; */
+    .map figcaption {
+        position: relative;
+        right: 340px;
     }
 
-    .section3 img{
-        display: flex;
-        flex-direction: row;
-        width: 50%;
-        height: 198px;
-        margin: 0 auto;
-        padding: 0px;
-        border: 7px solid black;
+    /*Location Summary Section*/
+    .section4 h3{
+        padding-bottom: 1%;
     }
 
     .section4 p {
-      padding: 0%;
-      margin-left: 5%;
+      padding-top: 3%;
     }
 
-
-    .section5 p {
-        padding: 0%;
-        margin-left: 0%;
+    .section5 h3{
+        padding-bottom: 3%;
     }
 
     .top a {
         position: relative;
         bottom: 55px;
-
-    }
+    } 
 
     .contact a{
         position: relative;
         bottom: 55px;
     }
 }
-
-@media screen and (min-width: 1436px) {
-
-    header nav img {
-        width: 15%;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-direction: row;
-        font-size: 2rem;
-        text-decoration: underline;
-        justify-content: center;
-        position: relative;
-        bottom: 150px;
-        width: 80%;
-        margin-left: 18%;
-    }
-
-    .image-banner figcaption {
-        position: relative;
-        bottom: 35px;
-    }
-
-    /*Family Summary p command*/
-    .section2 p {
-        font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
-        font-size: 1rem;
-        font-variant: normal;
-        font-weight: 400;
-        display: flex;
-        position: relative;
-        top: -15px;
-        color: black;
-        padding: 5%;
-        text-align: left;
-        margin: auto;
-      }
-
-      .scroll-indicator {
-        position: relative;
-        top: -65px;
-        left: 1350px;
-    }
-
-    .section3 div {
-        background-color: #1B341e;
-    }
-    .section3 div img{
-        display: flex;
-        flex-direction: row;
-        width: 50%;
-        height: 198px;
-        margin: 0 auto;
-        border: 7px solid black;
-    }
-
-    /*VA Map image*/
-    .section3 div img{
-        display: flex;
-        flex-direction: row;
-        width: 50%;
-        height: 198px;
-        margin: 0 auto;
-        padding: 0px;
-        border: 7px solid black;
-    }
-
-    .section3 div figcaption {
-        position: relative; 
-        bottom: 30px;
-    }
-}
-
 
