@@ -35,7 +35,7 @@
 
 /* RESET STYLESHEET */
 
-*{
+* {
     border: 0;
     margin: 0;
     padding: 0;
@@ -48,32 +48,53 @@ div {
     flex-direction: column;
 }
 
+/*Setting a minimum height so that the header can grow and changing the background color.*/
 header {
-    height: 225px;
+    min-height: 150px;
     width: 100%;
+    /* background-color: #d9d9d9; */
+   
+
+}
+
+/*Nav*/
+
+/*changing the color and size of hamburger icon.*/
+/* label is for hamburger menu icon only.*/
+label{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 15%; 
+    font-size: 4.5rem;
+    margin: 5%;
+    padding-right:5%;
+   position: relative; 
+   left: 270px;
+   bottom: 140px;
+    color: #406833;
+    cursor: pointer; 
 
 }
 
 /*display none for #hamburger makes checkbox disappear */
-#hamburger {
+#hamburger-check {
     display: none;
-    position: absolute;
+    /* position: absolute;
     top: 20px;
     width: 30%;
-    margin: 5%;
+    margin: 5%; */
 }
 
-/*This code says when checkmark is checked, I want you to find next sibling which is the ul and I want you to display it.*/
-#hamburger:checked ~ ul {
-    display:block;
-}
 
 header nav {
     background-color: #d9d9d9;
     width: 100%;
-    height: 150px;
-    font-size:3rem;
-}
+    min-height: 125px;
+    /* font-size:1.5rem; */
+    margin-bottom: -75px;
+   
+} 
 
 /*header nav img is for McFadden crest logo*/
 header nav img{
@@ -83,37 +104,67 @@ header nav img{
     padding-right: 5%;
 }
 
-/* header nav label is for hamburger menu icon only.*/
-header nav label{
+/*Style the Navigation List*/
+/*Display none under header nav ul makes list disappear.*/
+ul {
     display: flex;
-    justify-content: center;
-    align-self: flex-end;
-    width: 15%;
-    /* height: 2rem; */
-    font-size: 4.5rem;
-    margin: 5%;
-    padding-right:5%;
-    float:right;
-    display: flex;
-    align-items:center;
-    color: #406833;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75px;
+    background-color: #d9d9d9;
+    display: none;
+    z-index: 999;
+    position: relative; 
+    bottom: 170px;
+    right: 30px;
 }
 
-/* Unordered list for navigation menu.*/
-/*Display none under header nav ul makes list disappear.*/
-header nav ul {
+ul li {
+    list-style-type: none;
+    padding: 2% 0;
+    width: 100%;
+    text-align: center;
+    /* outline: 1px solid greenyellow; */
+}
+
+ul li a:hover {
+    background-color: #1b341e;
+    color: #a5Bf6B;
+    text-decoration: underline;
+}
+
+ul li a{
+    color: #406833; 
+    text-decoration: none;
+    font-size: 1.5 rem;
+    font-weight: 900;
+}
+
+/*This code says when checkmark is checked, I want you to find next sibling which is the ul and I want you to display it.*/
+#hamburger-check:checked ~ ul {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+/*Sub-navigation*/
+/*Displays sub nav list when hover over link.*/
+.show-sub:hover .sub-nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #d9d9d9;
-    display: none;
-    z-index: 999;
+    padding-left: 3%;
+    list-style-type: none;
 }
 
-header nav ul li {
-    list-style-type: none;
-    padding: 2% 0;
-}
+/*Gave height and width to sub-nav trying to get it to display.*/
+.show-sub, .sub-nav {
+    min-height: 100px;
+    width: 100%;
+} 
+
 
 /*Title of the website goes here.*/
 header h1 {
@@ -121,20 +172,18 @@ header h1 {
     flex-direction: column;
     flex-wrap: wrap;
     font-family: 'Croissant One', 'Times New Roman', serif;
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 900;
     /* line-height: 1; */
     color: #d9d9d9;
     text-align: center;
     background-color: #1B341e;
     width: 100%;
-    height: 500px;
+    min-height: 75px;
     padding: 5%;
+    margin-top: -3%;
+    margin-right: 5%;
 }
-
- /* .surname {
-    font-size: 3rem;
-} */
 
 main {
     /* background-color: #A5BF6B; */
@@ -146,9 +195,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    top: 125px;
-    height: 300px;
+    /* height: 300px; */
     width: 100%;
     margin: 0 auto;
     /* background-image: url(../images/home-page/pexels-daniel-shapiro-17946182.jpg);
@@ -162,16 +209,24 @@ main {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 0.75rem;
     font-style: italic;
-    padding: 5%;
     text-align: center;
+    padding: 3%;
     position: relative;
-    top: 90px;
+    top: 5px;
     /* border: 1px solid purple; */
 }
 
 /* Section 2 Starts Here.  Family Summary Section*/
 
 /*Family Summary section header*/
+
+.section2 {
+    min-height: 450px;
+    width: 100%;
+    margin-top: -52px;
+    background-color: #A5BF6B;
+}
+
 .section2 h3 {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1.25rem;
@@ -180,21 +235,16 @@ main {
     display: flex;
     flex-direction: column;
     position: relative; 
-    top: 68px;
+    top: 50px;
     color: #1b341e;
     text-transform: uppercase;
     padding-left: 5%;
-    padding-top: 8%;
+    padding-top: 5%;
     padding-bottom: 5%;
     text-align: left;
     /* border: 1px solid red; */
 }
 
-.section2 {
-    height: 475px;
-    width: 100%;
-    background-color: #A5BF6B;
-}
 
 /*Family Summary paragraph*/
 .section2 p {
@@ -204,9 +254,10 @@ main {
   font-weight: 400;
   display: flex;
   position: relative;
-  top: 45px;
+  top: 40px;
   color: black;
   padding: 5%;
+  margin-right: 5%;
   text-align: left;
   /* margin: auto; */
 }
@@ -217,14 +268,12 @@ main {
     height: 50px;
     border-radius: 50%;
     position: relative;
-    top: 20px;
-    left: 273px;
+    top: -5px;
+    left: 290px;
     font-size: 2rem; 
     background-color:#1b341e;
     color: #A5BF6B;
     transform: rotate(270deg);
-   
-
 }
 
 /* Map of State of VA goes in section 3 */
@@ -292,6 +341,7 @@ main {
     top: 25px;
     padding-top: 5%;
     padding-left: 5%;
+    margin-right: 5%;
     height: 50px;
 }
 
@@ -385,6 +435,12 @@ footer div {
 
 @media screen and (min-width:480px) {
 
+    label {
+        position: relative;
+        left: 340px;
+    
+    }
+
     /*Positions scroll indicator icon*/
     .scroll-indicator {
         position: relative;
@@ -395,9 +451,35 @@ footer div {
 
 /*Tablet size screen starts at 744px*/
 @media screen and (min-width:744px) {
-   
+    header {
+        min-height: 75px;
+    }
+
+    header nav img {
+        width: 20%;
+        /* border: 1px solid red; */
+    }
+
+    header nav {
+        min-height: 150px;
+    } 
+
+    label {
+        position: relative;
+        margin-top: -5px;
+        position: relative;
+        left: 585px;
+    }
+
+    .image-banner figcaption {
+        position: relative;
+        top: 20px;
+        margin-top: -5%;
+    }
+
+
     .section2 {
-        height: 375px;
+       min-height: 330px;
     }
 
 /*Family Summary Section header*/
@@ -406,19 +488,12 @@ footer div {
         top: 120px; */
         padding-top: 3%;
         padding-bottom: 3%;
+        /* border: 1px solid red; */
         }
 
-        header nav img {
-            width: 15%;
-            /* border: 1px solid red; */
-        }
-
- 
-        header nav {
-            height: 200px;
-        } 
-
-
+    .section2 p {
+        margin-top: -5%;
+    }
         .scroll-indicator {
                 position: relative;
                 top: 0px;
@@ -443,7 +518,8 @@ footer div {
         .section4 {
             height: 250px;
             margin: 0%;
-            /* border: 1px solid white; */
+            border: 1px solid white;
+            margin-top: -5%;
         }
    
 
@@ -485,8 +561,18 @@ footer div {
     /*Screen Size of desktop starts with 1024px*/
 @media screen and (min-width: 1024px) {
 
-    .image-banner figcaption{
-        padding: 5%;
+    header nav img{
+        width: 15%;
+    }
+
+    label {
+        position: relative;
+        left: 800px;
+    }
+    .image-banner figcaption {
+        position: relative;
+        top: 20px;
+        margin-top: -3%;
     }
 
     /*Family Summary Section*/
@@ -495,8 +581,8 @@ footer div {
     }
 
     .section2 h3 {
-       padding-top: 0%;
-       padding-bottom: 0%;
+       padding-top: 3%;
+       padding-bottom: 3%;
     }
 
     .scroll-indicator {
@@ -533,4 +619,3 @@ footer div {
         bottom: 55px;
     }
 }
-
