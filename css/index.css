@@ -114,9 +114,9 @@ ul {
     background-color: #d9d9d9;
     display: none;
     z-index: 999;
-    position: relative; 
+    /* position: relative; 
     bottom: 170px;
-    right: 30px;
+    right: 30px; */
 }
 
 ul li {
@@ -148,6 +148,15 @@ ul li a{
     list-style-type: none;
 }
 
+/*Push up main-nav to start further up on the page.*/
+.main-nav {
+    position: relative;
+    bottom: 200px;
+    margin-bottom: -10%;
+    /* border: 1px solid red; */
+}
+
+
 /*Sub-navigation*/
 /*Displays sub nav list when hover over link.*/
 .show-sub:hover .sub-nav {
@@ -155,16 +164,30 @@ ul li a{
     flex-direction: column;
     align-items: center;
     background-color: #d9d9d9;
-    padding-left: 3%;
+    /* padding-left: 3%; */
     list-style-type: none;
 }
 
 /*Gave height and width to sub-nav trying to get it to display.*/
 .show-sub, .sub-nav {
-    min-height: 100px;
+    /* min-height: 100px; */
     width: 100%;
 } 
 
+.sub-nav {
+    margin-top: 0%;
+    margin-bottom: -5%;
+    font-size: 1rem;
+    /* border: 1px solid blue; */
+    margin-left: 5%;
+}
+
+.sub-nav li {
+    margin-top: -2%;
+    margin-bottom: 1%;
+    padding: 2%;
+    line-height: 1;
+}
 
 /*Title of the website goes here.*/
 header h1 {
@@ -433,6 +456,7 @@ footer div {
 
 /*default styles here, targets mobile first for screens under 480px*/
 
+/* ********************************************************************************** */
 @media screen and (min-width:480px) {
 
     label {
@@ -449,9 +473,13 @@ footer div {
     }
 }
 
+/* ********************************************************************************** */
 /*Tablet size screen starts at 744px*/
 @media screen and (min-width:744px) {
     header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         min-height: 75px;
     }
 
@@ -469,6 +497,36 @@ footer div {
         margin-top: -5px;
         position: relative;
         left: 585px;
+    }
+
+    /*Code to change over navigation from hamburger menu to ul*/
+    /*this makes the hamburger menu icon disappear.*/
+
+    #hamburger {
+        display:none;
+    }
+
+    /*This code makes nav ul display in a row not column.*/
+    ul {
+        /* position: relative; */
+        z-index:999;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        min-height: 75px;
+        width: 100%;
+        /* border: 1px solid yellowgreen; */
+    }
+
+    ul li {
+        padding-bottom:0;
+        padding-right: 2%;
+    }
+
+    .sub-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .image-banner figcaption {
@@ -558,6 +616,7 @@ footer div {
         }
     }
 
+    /* *******************************************************************************/
     /*Screen Size of desktop starts with 1024px*/
 @media screen and (min-width: 1024px) {
 
