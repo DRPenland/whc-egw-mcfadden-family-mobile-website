@@ -160,6 +160,11 @@ ul li a{
     /* border: 1px solid red; */
 }
 
+/*This sub-nav makes the sub-menu disappear until hover over link. Otherwise subnav shows all the
+
+.sub-nav {
+    display:none;
+}
 
 /*Sub-navigation*/
 /*Displays sub nav list when hover over link.*/
@@ -179,23 +184,7 @@ ul li a{
     height: auto; 
 } 
 
-.sub-nav {
-    font-family: 'Croissant One', 'serif';
-    font-size: 1rem;
-    font-weight:bold;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    float: left;
-    height: auto;
-    /* padding-bottom: -5%; */
-    margin-top: 0%;
-    margin-bottom: -5%;
-    font-size: 1rem;
-    /* border: 1px solid blue; */
-    margin-left: 15%;
-  
-}
+
 
 .sub-nav li {
     margin-top: -2%;
@@ -508,6 +497,7 @@ footer div {
 }
 
 /* ********************************************************************************** */
+/*HOMEPAGE MEDIA QUERY*/
 /*Tablet size screen starts at 744px*/
 @media screen and (min-width:744px) {
     header {
@@ -552,10 +542,12 @@ footer div {
 
     ul li {
         padding-bottom:0;
-        padding-right: 2%;
+        padding-right: 1%;
     }
 
     .main-nav {
+        display: flex;
+        flex-direction: row;
         position:relative;
         bottom: 35px;
         width: 100%;
@@ -565,9 +557,13 @@ footer div {
 
     /*Sub-navigation content (hidden by default)*/
     .sub-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: relative;
         top: 0px;
-        left: 20px;
+        left: 30px;
+        font-size: 1rem;
         padding-bottom: 0%;
     }
 
@@ -585,16 +581,14 @@ footer div {
     }
 
     .image-banner figcaption {
-        position: relative;
-        top: 5px;
-        margin-top: -3%;
+     position: relative;
+     top: 50px;
+
     }
 
 
     .section2 {
        min-height: 330px;
-       position: relative;
-       top: -5%;
     }
 
 /*Family Summary Section header*/
@@ -610,7 +604,7 @@ footer div {
       /*Positions scroll indicator icon*/
       .scroll-indicator {
         position: relative;
-        bottom: 25px;
+        top: 5px;
         left: 600px;
     }
 
@@ -670,6 +664,7 @@ footer div {
     }
 
     /* *******************************************************************************/
+    /*HOMEPAGE MEDIA QUERY*/
     /*Screen Size of desktop starts with 1024px*/
 @media screen and (min-width: 1024px) {
 
@@ -685,7 +680,7 @@ footer div {
 
     .image-banner figcaption {
         position: relative;
-        top: 32px;
+        top: 50px;
         margin-top: -3%;
     }
 
