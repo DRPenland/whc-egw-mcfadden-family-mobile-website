@@ -72,7 +72,6 @@ label{
     bottom: 140px;
     color: #406833;
     cursor: pointer; 
-
 }
 
 /*display none for #hamburger makes checkbox disappear */
@@ -160,7 +159,7 @@ ul li a{
     /* border: 1px solid red; */
 }
 
-/*This sub-nav makes the sub-menu disappear until hover over link. Otherwise subnav shows all the
+/*This sub-nav makes the sub-menu disappear until hover over link. Otherwise subnav shows all the time.*/
 
 .sub-nav {
     display:none;
@@ -397,7 +396,7 @@ main {
 }
 
 /*Religion section paragraph*/
-.section5 p{
+.section5 p {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1rem;
     font-variant: normal;
@@ -728,3 +727,224 @@ footer div {
         bottom: 55px;
     }
 } 
+
+/**************************************************************************************************************************************/
+/*******************************PAGE 2 WHC McFadden Page Commands Start Now ***********************************************************/
+
+.greenheader {
+    background-color: #1b341e;
+}
+
+
+/*Title of the website goes here.*/
+header h1 {
+    font-size: 3rem;
+}
+
+/*giving size, color to subheadings patriarch, nickname.*/
+.greenheader h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d9d9d9;
+
+}
+
+/* Center the pic of signature, obituary and reminiscent articles.*/
+.whcsignature, .obit, .rem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%; 
+}
+
+/*Attempt to bring reminiscent article in on the sides of the screen. Didn't work.*/
+.rem {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Center the pic of WHC McFadden.*/
+.whcpic {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+/*Center the figcaption and give text size.*/
+.whcpic, .obit, .rem figcaption {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    padding:5%;
+    color: #d9d9d9;
+}
+
+.rem figcaption {
+    position: relative;
+    bottom: 25px;
+}
+
+/*Size and color of the birth and death dates under WHC's pic.*/
+.whcpic p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.5rem;
+    padding:5%;
+    color: #d9d9d9;
+}
+
+.whcmain {
+    background-color: #A5BF6B;
+    width: 100%;
+}
+
+
+/*Trying to get the h3 size to change that did not take in command below.*/
+.whcmain h3:first-of-type{
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+}
+
+/*Changes all h3 headings in .whcmain except first one.*/
+.whcmain h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+/* Trying to move .scroll-indicator next to birth parents heading to the right.*/
+.whcmain .scroll-indicator{
+  position: relative;
+  right: -100px;
+  margin-right: -10%;
+}
+
+/*Formatting the paragraphs under .whcmain section.*/
+.whcmain p{
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Formats Findagrave link at bottom of .whcmain section.*/
+.whcmain a {
+    color: #406833;
+    margin-left:5%;
+    margin-bottom: 5%;
+    margin-right:5%;
+}
+
+/*Background color for the .whcfamily section.*/
+.whcfamily {
+    background-color:#A5BF6B;
+}
+
+/*Format Children Heading*/
+.whcfamily h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+/*Format .scrollindicator in .whcfamily section*/
+.whcfamily .scroll-indicator {
+    position: relative;
+    right: -35px;
+}
+
+/*Formats ordered list of kidsnames.*/
+.kidsnames {
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-bottom:5%;
+}
+
+/*Formats list of h4 Children's names in .kidsnames.*/
+.kidsnames h4 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1B341e;
+    text-decoration: none;
+}
+
+/*Ordered list line items*/
+.kidsnames li {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #000000;
+}
+
+/*Formats the download family tree button.*/
+.btn2 {
+    background-color: #d9d9d9;
+    border: none;
+    color: black;
+    width: 30%;
+    padding: 15px 18px;
+    margin-left: 10%;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:2rem;
+    font-weight: bold;
+}
+
+.top {
+    position: relative;
+    bottom: 25px;
+    font-size: 1.5rem;
+}
+
+.contact {
+    position: relative;
+    bottom: 50px;
+    font-size: 1.5rem;
+}
+/*PAGE 2 WHC MCFADDEN PAGE MEDIA QUERY*/
+/*Tablet size screen starts at 744px*/
+@media screen and (min-width:744px) {
+
+    /*Code to change over navigation from hamburger menu to ul*/
+    /*this makes the hamburger menu icon disappear.*/
+
+    label {
+        display: none;
+    }
+    
+
+    /*This code makes nav ul display in a row not column.*/
+    ul {
+        position: relative;
+        top: 5%;
+        z-index:999;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 75px;
+    }
+
+    ul li {
+        padding-bottom:0;
+        padding-right: 1%;
+    }
+}
