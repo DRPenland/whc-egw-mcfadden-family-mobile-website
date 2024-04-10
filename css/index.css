@@ -50,7 +50,7 @@ div {
 
 /*Setting a minimum height so that the header can grow and changing the background color.*/
 header {
-    min-height: 150px;
+    min-height: 125px;
     width: 100%;
     /* background-color: #d9d9d9; */
 }
@@ -83,12 +83,13 @@ label{
     margin: 5%; */
 }
 
-
+/*Leave margin-bottom at -3%. Causes a problem when try to reduce gray area when at media query 1024px. Causes eader nav and main nav not flush.*/
 header nav {
     background-color: #D9d9d9;
     width: 100%;
     min-height: 125px;
     /* font-size:1.5rem; */
+    margin-bottom: -3%;
    
 } 
 
@@ -115,6 +116,7 @@ ul {
     /* position: relative; 
     bottom: 170px;
     right: 30px; */
+
 }
 
 ul li {
@@ -154,9 +156,11 @@ ul li a{
     font-size: 1.25rem;
     position: relative;
     bottom: 135px;
+    width: 125%;
     padding-bottom: 5%;
+    padding-right: 5%;
     margin-bottom: 0%;
-    /* border: 1px solid red; */
+
 }
 
 /*This sub-nav makes the sub-menu disappear until hover over link. Otherwise subnav shows all the time.*/
@@ -184,7 +188,7 @@ ul li a{
 } 
 
 
-
+/*Space between .sub-nav line items*/
 .sub-nav li {
     margin-top: -2%;
     margin-bottom: 1%;
@@ -506,6 +510,8 @@ footer div {
         min-height: 150px;
     }
 
+ 
+
     header nav img {
         width: 20%;
         height: auto;
@@ -516,7 +522,10 @@ footer div {
     }
 
     header nav {
-        min-height: 175px;
+        min-height: 25px;
+        margin-bottom: 5%;
+        
+        
     }  
 
     /*Code to change over navigation from hamburger menu to ul*/
@@ -566,11 +575,12 @@ footer div {
         padding-bottom: 0%;
     }
 
+    /*margin top to close white gap between h1 and nav.*/
     header h1 {
         position: relative; 
         top: 30px;
         min-height: 200px;
-        margin-top: -5%;
+        margin-top: -7%;
         margin-bottom: -3%;
     }
 
@@ -676,6 +686,10 @@ footer div {
         left: 800px;
     }
 
+    /*Close white gap between nav and h1.*/
+    header h1 {
+        margin-top: -18%;
+    }
 
     .image-banner figcaption {
         position: relative;
@@ -789,9 +803,11 @@ header h1 {
     color: #d9d9d9;
 }
 
+/*Position figcaption citation under reminiscent article.*/
 .rem figcaption {
     position: relative;
-    bottom: 25px;
+    bottom: 35px;
+    margin-top: -1%;
 }
 
 /*Size and color of the birth and death dates under WHC's pic.*/
@@ -814,6 +830,24 @@ header h1 {
     font-size: 1.25rem; 
     text-transform: capitalize;
     color: #1B341e;
+    padding-bottom: -5%;
+    position: relative;
+    top: 10px; 
+}
+
+/*Scroll down indicator icon next to birth parents heading*/
+.down2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -15px;
+    right: -400px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -5%;
 }
 
 /*Changes all h3 headings in .whcmain except first one.*/
@@ -823,13 +857,6 @@ header h1 {
     text-transform: capitalize;
     color: #1B341e;
     margin-left: 5%;
-}
-
-/* Trying to move .scroll-indicator next to birth parents heading to the right.*/
-.whcmain .scroll-indicator{
-  position: relative;
-  right: -100px;
-  margin-right: -10%;
 }
 
 /*Formatting the paragraphs under .whcmain section.*/
@@ -864,9 +891,18 @@ header h1 {
 }
 
 /*Format .scrollindicator in .whcfamily section*/
-.whcfamily .scroll-indicator {
+.arrow2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     position: relative;
-    right: -35px;
+    top: -25px;
+    left: 400px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -8%;
 }
 
 /*Formats ordered list of kidsnames.*/
@@ -893,6 +929,21 @@ header h1 {
     color: #000000;
 }
 
+/*Formats and positions last scroll-indicator on the page below .kidsnames.*/
+.scroll2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 400px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -8%;
+}
+
 /*Formats the download family tree button.*/
 .btn2 {
     background-color: #d9d9d9;
@@ -904,35 +955,84 @@ header h1 {
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size:2rem;
+    font-size:1rem;
     font-weight: bold;
 }
 
 .top {
     position: relative;
-    bottom: 25px;
+    bottom: 15px;
     font-size: 1.5rem;
 }
 
 .contact {
     position: relative;
-    bottom: 50px;
+    bottom: 40px;
     font-size: 1.5rem;
 }
-/*PAGE 2 WHC MCFADDEN PAGE MEDIA QUERY*/
+
+/**************************************************PAGE 2 WHC MCFADDEN PAGE MEDIA QUERIES***********************************/
 /*Tablet size screen starts at 744px*/
 @media screen and (min-width:744px) {
 
-    /*Code to change over navigation from hamburger menu to ul*/
+/*Margin-bottom makes header nav and main nav flush at 744px.*/
+header nav {
+    margin-bottom: 2%;
+}
+
+
+/*Reduce height of dark green .greenheader background-color.*/
+.greenheader {
+    margin-bottom: -8%;
+}
+
+/*position hamburger icon further to the right*/
+label {
+    padding-right: 0%;
+    margin-right: 0%;
+}
+
+/*Scroll down indicator icon next to birth parents heading*/
+.down2 { 
+    position: relative;
+    top: -35px;
+    left: 850px;
+    margin-right: -5%;
+}
+
+/*Format scroll-indicator in .whcfamily section*/
+.arrow2 {
+    position: relative;
+    left: 850px;
+}
+
+
+/*Format last scroll-indicator on page below .kidsnames.*/
+.scroll2 {
+    position: relative;
+   left: 850px;
+}
+
+.kidsnames {
+    margin-top: 5%;
+}
+/*Closing curly brace for media inquiry at 744px*/
+}
+
+/******************************************MEDIA QUERY 1024px for WHC PAGE 2 starts here*************************************************/
+ /*Screen Size of desktop starts with 1024px for WHC Page 2*/
+ @media screen and (min-width: 1024px) {
+
+ /*Code to change over navigation from hamburger menu to ul*/
     /*this makes the hamburger menu icon disappear.*/
 
     label {
         display: none;
-    }
+    } 
     
 
     /*This code makes nav ul display in a row not column.*/
-    ul {
+     ul {
         position: relative;
         top: 5%;
         z-index:999;
@@ -941,10 +1041,44 @@ header h1 {
         justify-content: flex-start;
         align-items: flex-start;
         min-height: 75px;
-    }
+       
+    } 
 
     ul li {
         padding-bottom:0;
         padding-right: 1%;
     }
-}
+
+    /*Make so no color gap between .main-nav and the header-nav. They are flush.The margin-bottom negative 15 causes gap from 744 media query.*/
+    header nav{
+       margin-bottom: 15%;
+    }
+
+    /*Reduce height at bottom of dark green greenheader section so margin is small margin-bottom.*/
+    /*Margin top to Fills in white gap between header nav and .greenheader.*/
+    .greenheader {
+        margin-bottom: -5%;
+        margin-top: -15%;
+    }
+
+    /*Position scroll-indicator next to birth parents heading. Put space between paragraph following and scroll indicator.*/
+    .down2 {
+        position: relative;
+        left: 900px;
+        margin-bottom: -3%;
+    }
+
+    /*Position scroll-indicator in .whcfamily section*/
+    .arrow2 {
+        position: relative;
+        left: 900px;
+    }
+
+    /*Position third and last scroll-indicator on page.*/
+    .scroll2 {
+        position: relative;
+        left: 900px;
+    }
+    
+    /*Closing Curly Brace for Media Query 1024px.*/
+  }
