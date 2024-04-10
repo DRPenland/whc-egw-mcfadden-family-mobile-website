@@ -825,7 +825,7 @@ header h1 {
 
 
 /*Trying to get the h3 size to change that did not take in command below.*/
-.whcmain h3:first-of-type{
+/* .whcmain h3:first-of-type{
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1.25rem; 
     text-transform: capitalize;
@@ -833,7 +833,7 @@ header h1 {
     padding-bottom: -5%;
     position: relative;
     top: 10px; 
-}
+} */
 
 /*Scroll down indicator icon next to birth parents heading*/
 .down2 {
