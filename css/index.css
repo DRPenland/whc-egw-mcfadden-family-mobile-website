@@ -220,6 +220,16 @@ main {
     width: 100%;
 }
 
+h2 {
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    /* line-height: 1; */
+    color: #d9d9d9;
+    text-align: center;
+}
+
+
 /*Hero image of Old Mill*/
 .image-banner img{
     display: flex;
@@ -747,6 +757,7 @@ footer div {
 
 .greenheader {
     background-color: #1b341e;
+    min-height: 75px;
 }
 
 
@@ -1082,3 +1093,128 @@ label {
     
     /*Closing Curly Brace for Media Query 1024px.*/
   }
+/********************************************************************************************************************************/
+/********************************************CSS Commands for page 3 egw.html starts here. **************************************/
+
+/*************************************************Make greenheader3 for page 3 taller to make room for egwobit and captions.*************/
+.greenheader3 {
+    min-height: 1200px;
+    margin-bottom: 5%;
+    background-color: #1b341e;
+}
+
+
+
+/**************************************Format EGW's signature**************************************************************************/
+
+.egwsignature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 40px;
+    padding-bottom: 5%;
+}
+
+/************Format EGW's picture.  Center it. *****************************************************/
+
+.egwpic {
+    display: Flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    left: 20px;
+    padding: 5%;
+}
+
+
+/********************Format figcaption under EGW's picture.***************************************/
+.egwpic figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+} 
+
+
+
+
+
+/****************************Move pic of Eden School down on the page.***************************************/
+.eden {
+    position: relative;
+    top: 70px;
+    margin-bottom: 5%;
+}
+
+.eden figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+}
+
+/**************************************Format pic of EGW Obit*************************************************/
+.egwobit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #1b341e;
+}
+
+.egwobit figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+    position: relative; 
+    top: -5px;
+    background-color: #1b341e;
+
+}
+
+/***************************Push main down to make room for greenheader to expand.******************************/
+main {
+    position: relative;
+    top: 10px;
+    background-color: #A5BF6B;
+   
+}
+
+/********* Format h3 headers in .egwmain******************************************************************************************/
+
+h3 {
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+
+/******************************Used class names for scroll-indicators from .whchtml for scroll-indicators on egw.html page 3 formatting.*********************************************/
+
+
+/*******Format paragraphs in .egwmain. *******************************************************************************************/
+.egwmain p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/********************Put margins on findagrave link. **********************************************************************/
+.egwmain a {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
