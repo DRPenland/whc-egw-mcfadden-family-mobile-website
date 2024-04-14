@@ -1,0 +1,1437 @@
+@font-face {
+    font-family: 'Croissant One';
+    src: url(.../fonts/CroissantOne-Regular.ttf);
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-Regular.ttf);
+    font-style:normal;
+    font-weight:400;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-Italic.ttf);
+    font-style:italic;
+    font-weight:400;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-SemiBold.ttf);
+    font-style:normal;
+    font-weight:700;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-BoldItalic.ttf);
+    font-style:normal;
+    font-weight:900;
+}
+
+/* RESET STYLESHEET */
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Original CSS commands are set for mobile first screen width of 360px*/
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Setting a minimum height so that the header can grow and changing the background color.*/
+header {
+    min-height: 125px;
+    width: 100%;
+    /* background-color: #d9d9d9; */
+}
+
+/*Nav*/
+
+/*changing the color and size of hamburger icon.*/
+/* label is for hamburger menu icon only.*/
+label{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 15%; 
+    font-size: 4.5rem;
+    margin: 5%;
+    padding-right:5%;
+    position: relative; 
+    left: 270px;
+    bottom: 140px;
+    color: #406833;
+    cursor: pointer; 
+}
+
+/*display none for #hamburger makes checkbox disappear */
+#hamburger-check {
+    display: none;
+    /* position: absolute;
+    top: 20px;
+    width: 30%;
+    margin: 5%; */
+}
+
+/*Leave margin-bottom at -3%. Causes a problem when try to reduce gray area when at media query 1024px. Causes eader nav and main nav not flush.*/
+header nav {
+    background-color: #D9d9d9;
+    width: 100%;
+    min-height: 125px;
+    /* font-size:1.5rem; */
+    margin-bottom: -3%;
+   
+} 
+
+/*header nav img is for McFadden crest logo*/
+header nav img{
+    width: 30%;
+    height: auto;
+    margin: 3% 3%;
+    padding-right: 5%;
+}
+
+/*Style the Navigation List*/
+/*Display none under header nav ul makes list disappear.*/
+ul {
+    font-family: 'Croissant One', 'serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75px;
+    background-color: #d9d9d9;
+    width:100%;
+    display: none;
+    z-index: 999;
+    /* position: relative; 
+    bottom: 170px;
+    right: 30px; */
+
+}
+
+ul li {
+    list-style-type: none;
+    padding: 2% 0;
+    /* width: 100%; */
+    text-align: center;
+    /* outline: 1px solid greenyellow; */
+}
+
+ul li a:hover {
+    background-color: #1b341e;
+    color: #a5Bf6B;
+    text-decoration: underline;
+}
+
+ul li a{
+    color: #406833; 
+    text-decoration: none;
+    /* font-size: 1.5rem; */
+    font-weight: 900;
+}
+
+/*This code says when checkmark is checked, I want you to find next sibling which is the ul and I want you to display it.*/
+#hamburger-check:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+/*Push up main-nav to start further up on the page.*/
+
+.main-nav {
+    font-family: 'Croissant One', 'serif';
+    font-weight: 900;
+    font-size: 1.25rem;
+    position: relative;
+    bottom: 135px;
+    width: 125%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    margin-bottom: 0%;
+
+}
+
+/*This sub-nav makes the sub-menu disappear until hover over link. Otherwise subnav shows all the time.*/
+
+.sub-nav {
+    display:none;
+}
+
+/*Sub-navigation*/
+/*Displays sub nav list when hover over link.*/
+.show-sub:hover .sub-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d9d9d9;
+    /* padding-left: 3%; */
+    list-style-type: none;
+}
+
+
+.show-sub, .sub-nav {
+    /* min-height: 100px; */
+    width: 100%;
+    height: auto; 
+} 
+
+
+/*Space between .sub-nav line items*/
+.sub-nav li {
+    margin-top: -2%;
+    margin-bottom: 1%;
+    padding: 2%;
+    line-height: 1;
+}
+
+/*Title of the website goes here.*/
+header h1 {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    /* line-height: 1; */
+    color: #d9d9d9;
+    text-align: center;
+    background-color: #1B341e;
+    width: 100%;
+    min-height: 275px;
+    padding: 5%;
+    margin-top: -5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+main {
+    /* background-color: #A5BF6B; */
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    /* line-height: 1; */
+    color: #d9d9d9;
+    text-align: center;
+}
+
+
+/*Hero image of Old Mill*/
+.image-banner img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -8%;
+    margin-bottom: -3%;
+    /* background-image: url(../images/home-page/pexels-daniel-shapiro-17946182.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center; */
+}
+
+/* Photo Citation goes here as figcaption for Old Mill image */
+ .image-banner figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    padding: 3%;
+    position: relative;
+    top: 5px;
+    /* border: 1px solid purple; */
+}
+
+/* Section 2 Starts Here.  Family Summary Section*/
+
+/*Family Summary section header*/
+
+.section2 {
+    min-height: 450px;
+    width: 100%;
+    margin-top: -52px;
+    background-color: #A5BF6B;
+}
+
+.section2 h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    top: 50px;
+    color: #1b341e;
+    text-transform: uppercase;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 0%;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+
+
+/*Family Summary paragraph*/
+.section2 p {
+  font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+  font-size: 1rem;
+  font-variant: normal;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+  top: 40px;
+  color: black;
+  padding: 5%;
+  margin-right: 5%;
+  text-align: left;
+  /* margin: auto; */
+}
+
+/*Scroll down indicator icon*/
+.scroll-indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -5px;
+    left: 290px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+}
+
+/* Map of State of VA goes in section 3 */
+
+.section3 {
+    width: 100%;
+    /* height: 220px; */
+    background-color: #1b341e;
+}
+
+/*Map of State of VA*/
+.section3 img{
+    width: 100%;
+    height: 198px;
+    margin-bottom: 2%;
+    padding: 0px;
+    border: 5px solid black;
+}
+
+/*Figcaption for Map of State of VA*/
+.map figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #a5bf6b;
+    padding: 3%;
+}
+
+/* Section 4 Location Information starts here.*/
+
+.section4 {
+    width: 100%;
+    height: 315px;
+    background-color: #1B341e;
+    /* border: 1px solid aqua; */
+}
+
+
+/*Location Section header*/
+.section4 h3 {
+    color: #a5bf6b;
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    position: relative;
+    top: 45px;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin-left: 0%;
+    margin-right: 5%;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+
+/*Location section paragraph*/
+.section4 p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-variant: normal;
+    font-weight: 400;
+    color: #a5bf6b;
+    position: relative;
+    top: 25px;
+    padding-top: 5%;
+    padding-left: 5%;
+    margin-right: 5%;
+    height: 50px;
+}
+
+/* Section 5 about Religion starts here. */
+
+.section5 {
+    height: 285px;
+    width: 100%;
+    margin: auto;
+    background-color: #A5BF6B;
+    /* border: 1px solid red; */
+}
+
+/*Religion section header*/
+.section5 h3{
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1b341e;
+    padding: 5%;
+    margin-left: 0%;
+    text-align: left;
+    /* border: 1px solid aqua; */
+}
+
+/*Religion section paragraph*/
+.section5 p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-variant: normal;
+    font-weight: 400;
+    color: black;
+    padding: 5%;
+    /* border: 1px solid black; */
+}
+
+/*Footer section starts here.*/
+
+footer {
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 100px;
+    padding: 5%;
+}
+
+footer div {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#000000;
+    border: 100px;
+    /* padding: 5%; */
+    text-align: left;
+    margin: 5%;
+}
+
+/*Back to Top Link*/
+.top a {
+    color: #406833;
+    margin-right: 8%;
+}
+
+.top a:hover{
+    color: #a5bf6b;
+    background-color: #1b341e;
+}
+
+/*Contact Information */
+.contact {
+    text-align: right;
+    position: relative;
+    bottom: 25px;
+}
+
+/*Contact information link*/
+.contact a {
+    color: #406833;
+}
+
+.contact a:hover{
+    color: #a5bf6b;
+    background-color: #1b341e;
+}
+
+/*Animate Contact Link By Rocking It*/
+.contact {
+ animation-name: rock-me;
+ animation-duration: 1s;
+ animation-direction: alternate;
+ animation-iteration-count:infinite;    
+}
+
+@keyframes rock-me {
+    from {
+        transform: rotate(-2deg);
+    }
+    to {
+        transform: rotate(2deg);
+    }
+}
+
+/* MEDIA QUERIES FOR HOMEPAGE STARTS HERE*/
+
+/*default styles here, targets mobile first for screens under 480px*/
+
+
+/* ********************************************************************************** */
+@media screen and (min-width:480px) {
+
+    label {
+        position: relative;
+        left: 340px;
+        bottom: 200px;
+    }
+
+    /*Positions scroll indicator icon*/
+    .scroll-indicator {
+        position: relative;
+        top: 25px;
+        left: 390px;
+    }
+}
+
+/* ********************************************************************************** */
+/*HOMEPAGE MEDIA QUERY*/
+/*Tablet size screen starts at 744px*/
+@media screen and (min-width:744px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 150px;
+    }
+
+ 
+
+    header nav img {
+        width: 20%;
+        height: auto;
+        position: relative;
+        top: -5%;
+        margin-bottom:3%;
+        z-index:1000;
+    }
+
+    header nav {
+        min-height: 25px;
+        margin-bottom: 5%;
+        
+        
+    }  
+
+    /*Code to change over navigation from hamburger menu to ul*/
+    /*this makes the hamburger menu icon disappear.*/
+
+    label {
+        display: none;
+    }
+    
+
+    /*This code makes nav ul display in a row not column.*/
+    ul {
+        position: relative;
+        top: 5%;
+        z-index:999;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 75px;
+    }
+
+    ul li {
+        padding-bottom:0;
+        padding-right: 1%;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+        position:relative;
+        bottom: 35px;
+        width: 100%;
+        margin-left: -3%;
+
+    }
+
+    /*Sub-navigation content (hidden by default)*/
+    .sub-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        left: 30px;
+        font-size: 1rem;
+        padding-bottom: 0%;
+    }
+
+    /*margin top to close white gap between h1 and nav.*/
+    header h1 {
+        position: relative; 
+        top: 30px;
+        min-height: 200px;
+        margin-top: -7%;
+        margin-bottom: -3%;
+    }
+
+    .image-banner img {
+        position: relative;
+        top: 40px;
+    }
+
+    .image-banner figcaption {
+     position: relative;
+     top: 50px;
+
+    }
+
+
+    .section2 {
+       min-height: 330px;
+    }
+
+/*Family Summary Section header*/
+    .section2 h3 {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        }
+
+    .section2 p {
+        margin-top: -5%;
+    } 
+
+      /*Positions scroll indicator icon*/
+      .scroll-indicator {
+        position: relative;
+        top: 5px;
+        left: 600px;
+    }
+
+    /*VA Map div class .maps controls 3 map images.*/
+    .maps {
+        display: flex;
+        flex-direction: row;
+        }
+
+
+    /*Figcaption of 3rd .map. Flexbox command won't work on figcaption here.*/
+    .map figcaption {
+        width: 100%;
+        position: relative;
+        right: 250px;
+        }
+
+    .section4 {
+        height: 250px;
+        margin: 0%;
+        border: 1px solid white;
+        margin-top: -5%;
+        }
+   
+
+        /*Section 4 Location heading*/
+    .section4 h3 {
+        padding-top: 0%;
+        padding-bottom: 3%;
+        }
+
+        /*Location Summary Paragraph*/
+    .section4 p {
+        padding-right: 5%;
+        }
+
+
+    /*Section 5 is the Religion section*/
+    .section5 {
+        height: 235px;
+        }
+
+    /*Section 5 Religion paragraph*/
+    .section5 p{
+        padding-top: 0%;
+        }
+
+    .top a {
+        position: relative;
+        bottom: 30px;
+        }
+
+    .contact a{
+        position: relative;
+        bottom: 30px;
+        }
+    }
+
+    /* *******************************************************************************/
+    /*HOMEPAGE MEDIA QUERY*/
+    /*Screen Size of desktop starts with 1024px*/
+@media screen and (min-width: 1024px) {
+
+    header nav img{
+        width: 15%;
+    }
+
+    label {
+        position: relative;
+        left: 800px;
+    }
+
+    /*Close white gap between nav and h1.*/
+    header h1 {
+        margin-top: -18%;
+    }
+
+    .image-banner figcaption {
+        position: relative;
+        top: 50px;
+        margin-top: -3%;
+    }
+
+    /*Family Summary Section*/
+    .section2 {
+        height: 325px;
+    }
+
+    .section2 h3 {
+       padding-top: 3%;
+       padding-bottom: 3%;
+    }
+
+    .scroll-indicator {
+        position: relative;
+        top: -10px;
+        left: 945px;
+    }
+
+    .map figcaption {
+        position: relative;
+        right: 340px;
+    }
+
+    /*Location Summary Section*/
+    .section4 h3{
+        padding-bottom: 1%;
+    }
+
+    .section4 p {
+      padding-top: 3%;
+    }
+
+    .section5 h3{
+        padding-bottom: 3%;
+    }
+
+    .top a {
+        position: relative;
+        bottom: 55px;
+    } 
+
+    .contact a{
+        position: relative;
+        bottom: 55px;
+    }
+} 
+
+/**************************************************************************************************************************************/
+/*******************************PAGE 2 WHC McFadden Page Commands Start Now ***********************************************************/
+
+.greenheader {
+    background-color: #1b341e;
+    min-height: 75px;
+}
+
+
+/*Title of the website goes here.*/
+header h1 {
+    font-size: 3rem;
+}
+
+/*giving size, color to subheadings patriarch, nickname.*/
+.greenheader h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d9d9d9;
+
+}
+
+/* Center the pic of signature, obituary and reminiscent articles.*/
+.whcsignature, .obit, .rem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%; 
+}
+
+/*Attempt to bring reminiscent article in on the sides of the screen. Didn't work.*/
+.rem {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Center the pic of WHC McFadden.*/
+.whcpic {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+/*Center the figcaption and give text size.*/
+.whcpic, .obit, .rem figcaption {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    padding:5%;
+    color: #d9d9d9;
+}
+
+/*Position figcaption citation under reminiscent article.*/
+.rem figcaption {
+    position: relative;
+    bottom: 35px;
+    margin-top: -1%;
+}
+
+/*Size and color of the birth and death dates under WHC's pic.*/
+.whcpic p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.5rem;
+    padding:5%;
+    color: #d9d9d9;
+}
+
+.whcmain {
+    background-color: #A5BF6B;
+    width: 100%;
+}
+
+
+/*Trying to get the h3 size to change that did not take in command below.*/
+/* .whcmain h3:first-of-type{
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+    padding-bottom: -5%;
+    position: relative;
+    top: 10px; 
+} */
+
+/*Scroll down indicator icon next to birth parents heading*/
+.down2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -15px;
+    right: -400px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -5%;
+}
+
+/*Changes all h3 headings in .whcmain except first one.*/
+.whcmain h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+/*Formatting the paragraphs under .whcmain section.*/
+.whcmain p{
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Formats Findagrave link at bottom of .whcmain section.*/
+.whcmain a {
+    color: #406833;
+    margin-left:5%;
+    margin-bottom: 5%;
+    margin-right:5%;
+}
+
+/*Background color for the .whcfamily section.*/
+.whcfamily {
+    background-color:#A5BF6B;
+}
+
+/*Format Children Heading*/
+.whcfamily h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+/*Format .scrollindicator in .whcfamily section*/
+.arrow2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 400px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -8%;
+}
+
+/*Formats ordered list of kidsnames.*/
+.kidsnames {
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-bottom:5%;
+}
+
+/*Formats list of h4 Children's names in .kidsnames.*/
+.kidsnames h4 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1B341e;
+    text-decoration: none;
+}
+
+/*Ordered list line items*/
+.kidsnames li {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #000000;
+}
+
+/*Formats and positions last scroll-indicator on the page below .kidsnames.*/
+.scroll2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 400px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -8%;
+}
+
+/*Formats the download family tree button.*/
+.btn2 {
+    background-color: #d9d9d9;
+    border: none;
+    color: black;
+    width: 30%;
+    padding: 15px 18px;
+    margin-left: 10%;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:1rem;
+    font-weight: bold;
+}
+
+.top {
+    position: relative;
+    bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.contact {
+    position: relative;
+    bottom: 40px;
+    font-size: 1.5rem;
+}
+
+/**************************************************PAGE 2 WHC MCFADDEN PAGE MEDIA QUERIES***********************************/
+/*Tablet size screen starts at 744px*/
+@media screen and (min-width:744px) {
+
+/*Margin-bottom makes header nav and main nav flush at 744px.*/
+header nav {
+    margin-bottom: 2%;
+}
+
+
+/*Reduce height of dark green .greenheader background-color.*/
+.greenheader {
+    margin-bottom: -8%;
+}
+
+/*position hamburger icon further to the right*/
+label {
+    padding-right: 0%;
+    margin-right: 0%;
+}
+
+/*Scroll down indicator icon next to birth parents heading*/
+.down2 { 
+    position: relative;
+    top: -35px;
+    left: 850px;
+    margin-right: -5%;
+}
+
+/*Format scroll-indicator in .whcfamily section*/
+.arrow2 {
+    position: relative;
+    left: 850px;
+}
+
+
+/*Format last scroll-indicator on page below .kidsnames.*/
+.scroll2 {
+    position: relative;
+   left: 850px;
+}
+
+.kidsnames {
+    margin-top: 5%;
+}
+/*Closing curly brace for media inquiry at 744px*/
+}
+
+/******************************************MEDIA QUERY 1024px for WHC PAGE 2 starts here*************************************************/
+ /*Screen Size of desktop starts with 1024px for WHC Page 2*/
+ @media screen and (min-width: 1024px) {
+
+ /*Code to change over navigation from hamburger menu to ul*/
+    /*this makes the hamburger menu icon disappear.*/
+
+    label {
+        display: none;
+    } 
+    
+
+    /*This code makes nav ul display in a row not column.*/
+     ul {
+        position: relative;
+        top: 5%;
+        z-index:999;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 75px;
+       
+    } 
+
+    ul li {
+        padding-bottom:0;
+        padding-right: 1%;
+    }
+
+    /*Make so no color gap between .main-nav and the header-nav. They are flush.The margin-bottom negative 15 causes gap from 744 media query.*/
+    header nav{
+       margin-bottom: 15%;
+    }
+
+    /*Reduce height at bottom of dark green greenheader section so margin is small margin-bottom.*/
+    /*Margin top to Fills in white gap between header nav and .greenheader.*/
+    .greenheader {
+        margin-bottom: -5%;
+        margin-top: -15%;
+    }
+
+    /*Position scroll-indicator next to birth parents heading. Put space between paragraph following and scroll indicator.*/
+    .down2 {
+        position: relative;
+        left: 900px;
+        margin-bottom: -3%;
+    }
+
+    /*Position scroll-indicator in .whcfamily section*/
+    .arrow2 {
+        position: relative;
+        left: 900px;
+    }
+
+    /*Position third and last scroll-indicator on page.*/
+    .scroll2 {
+        position: relative;
+        left: 900px;
+    }
+    
+    /*Closing Curly Brace for Media Query 1024px.*/
+  }
+/********************************************************************************************************************************/
+/********************************************CSS Commands for page 3 egw.html starts here. **************************************/
+
+/*Make greenheader3 for page 3 taller to make room for egwobit and captions.*/
+.greenheader3 {
+    min-height: 1200px;
+    margin-bottom: 5%;
+    background-color: #1b341e;
+}
+
+/*giving size, color to subheadings patriarch, nickname.*/
+.greenheader3 h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -35px;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d9d9d9;
+}
+
+/*Format EGW's signature*/
+
+.egwsignature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 40px;
+    padding-bottom: 5%;
+}
+
+
+/*Format EGW's picture.  Center it. */
+
+.egwpic {
+    display: Flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    left: 20px;
+    padding: 1% 0%;
+}
+
+
+/*Format figcaption under EGW's picture.*/
+.egwpic figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+  
+} 
+
+/*Push .egwpic h2 (birth and death dates) off the .egwpic figcaption.*/
+.egwpic h2 {
+    position: relative;
+    top: 5px;
+}
+
+
+
+
+/*Move pic of Eden School down on the page. Make the pic of Eden school responsive by adding width/height.*/
+.eden img {
+    position: relative;
+    top: 70px;
+    margin-bottom: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.eden figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+}
+
+/*Format pic of EGW Obit*/
+.egwobit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #1b341e;
+}
+
+.egwobit figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+    position: relative; 
+    top: -5px;
+    background-color: #1b341e;
+
+}
+
+/*Push main down to make room for greenheader to expand.*/
+main {
+    position: relative;
+    top: 10px;
+    background-color: #A5BF6B;
+   
+}
+
+/* Format h3 headers in .egwmain*/
+
+h3 {
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+
+/*********Used class names for scroll-indicators from .whchtml for scroll-indicators on egw.html page 3 formatting.*********************************************/
+
+
+/*Format paragraphs in .egwmain.*/
+.egwmain p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Put margins on findagrave link. */
+.egwmain a {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+/******************************************************Media Queries for egw.html page 3 start here.*********************************************/
+/*Tablet size screen starts at 744px*/
+@media screen and (min-width:744px) {
+
+
+    /*Left .egwpic, .egoobit and .eden in column format. Not enough room to fit pics in space.*/
+
+  /*Move birth and death dates off egwpic figcaption.*/
+    /* .egwpic h2 {
+        position: relative;
+        top: 10px;
+    } */
+  
+    /*Move eden figcaption down a little.*/
+    /* .eden figcaption {
+        position: relative;
+        top: 22px;
+    } */
+
+    /* .egwobit {
+        position: relative;
+        bottom: 25px;
+    } */
+
+    /*Close white gap between main and header sections.*/
+    /* main {
+        margin-top: -5%;
+    }   */
+
+    .egwsignature {
+        position: relative; 
+        left: 18px;
+        margin-bottom: -5%;
+       }
+       
+        /* Put egwpic and figcaption in row format.*/
+        .egwpic img {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 275px;
+            height: auto;
+            margin-left: 1%;
+        }
+    
+        /*Move birth and death dates to make room for egwpic.*/
+        .egwpic h2 {
+            position: relative;
+            top: 25px;
+            
+            
+        }
+    
+    
+        /*Move pic of Eden school to the left of egwpic.*/
+        .eden img {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            position: relative;
+            top:-375px;
+            left: 38px;
+            margin-left: 1%;
+            width: 275px;
+            height: auto;
+        }
+    
+        .eden figcaption {
+            position: relative;
+            top: -430px;
+            left: -300px;
+        }
+    
+    
+        /*Move pic of egwobit to the left of egwpic.*/
+        .egwobit img {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+            bottom: 840px;
+            right: -330px;
+        
+            margin-right: 5%;
+            width: 275px;
+            height: auto;
+        }
+    
+        .egwobit figcaption {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+            top: -820px;
+            right: -335px;
+        
+        }
+    
+        .greenheader3 {
+            min-height: 300px;
+            margin-bottom: -50%;
+        }
+    
+    }
+
+
+/**********************************************************1024px media query starts now.************************/
+/*Screen Size of desktop starts with 1024px for EGW Page 3*/
+@media screen and (min-width: 1024px) { 
+
+/* 
+   .egwsignature {
+    position: relative; 
+    left: 18px;
+    margin-bottom: -5%;
+   } */
+   
+    /* Put egwpic and figcaption in row format.*/
+    /* .egwpic img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 275px;
+        height: auto;
+        margin-left: 1%;
+    } */
+
+    /*Move birth and death dates to make room for egwpic.*/
+    /* .egwpic h2 {
+        position: relative;
+        top: 25px;
+        
+        
+    } */
+
+
+    /*Move pic of Eden school to the left of egwpic.*/
+    /* .eden img {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        position: relative;
+        top:-375px;
+        left: 38px;
+        margin-left: 3%;
+        width: 275px;
+        height: auto;
+    } */
+
+    /* .eden figcaption {
+        position: relative;
+        top: -430px;
+        left: -300px;
+    } */
+
+
+    /*Move pic of egwobit to the left of egwpic.*/
+    /* .egwobit img {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        bottom: 840px;
+        right: -355px;
+        padding-left: 5%;
+        margin-right: 5%;
+        width: 275px;
+        height: auto;
+    } */
+
+    /* .egwobit figcaption {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        top: -820px;
+        right: -350px;
+        margin-right: 5%;
+    } */
+/* 
+    .greenheader3 {
+        min-height: 300px;
+        margin-bottom: -40%;
+    } */
+
+}
