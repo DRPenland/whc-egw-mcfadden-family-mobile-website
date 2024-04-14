@@ -209,10 +209,11 @@ header h1 {
     text-align: center;
     background-color: #1B341e;
     width: 100%;
-    min-height: 75px;
+    min-height: 275px;
     padding: 5%;
     margin-top: -5%;
     margin-right: 5%;
+    margin-bottom: 5%;
 }
 
 main {
@@ -238,6 +239,7 @@ h2 {
     height: auto;
     width: 100%;
     margin: 0 auto;
+    margin-top: -8%;
     margin-bottom: -3%;
     /* background-image: url(../images/home-page/pexels-daniel-shapiro-17946182.jpg);
     background-repeat: no-repeat;
@@ -282,6 +284,7 @@ h2 {
     padding-left: 5%;
     padding-top: 5%;
     padding-bottom: 5%;
+    margin-left: 0%;
     text-align: left;
     /* border: 1px solid red; */
 }
@@ -366,6 +369,7 @@ h2 {
     text-transform: uppercase;
     padding-bottom: 5%;
     padding-left: 5%;
+    margin-left: 0%;
     margin-right: 5%;
     text-align: left;
     /* border: 1px solid red; */
@@ -405,6 +409,7 @@ h2 {
     text-transform: uppercase;
     color: #1b341e;
     padding: 5%;
+    margin-left: 0%;
     text-align: left;
     /* border: 1px solid aqua; */
 }
@@ -1096,16 +1101,27 @@ label {
 /********************************************************************************************************************************/
 /********************************************CSS Commands for page 3 egw.html starts here. **************************************/
 
-/*************************************************Make greenheader3 for page 3 taller to make room for egwobit and captions.*************/
+/*Make greenheader3 for page 3 taller to make room for egwobit and captions.*/
 .greenheader3 {
     min-height: 1200px;
     margin-bottom: 5%;
     background-color: #1b341e;
 }
 
+/*giving size, color to subheadings patriarch, nickname.*/
+.greenheader3 h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -35px;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d9d9d9;
+}
 
-
-/**************************************Format EGW's signature**************************************************************************/
+/*Format EGW's signature*/
 
 .egwsignature {
     display: flex;
@@ -1116,7 +1132,8 @@ label {
     padding-bottom: 5%;
 }
 
-/************Format EGW's picture.  Center it. *****************************************************/
+
+/*Format EGW's picture.  Center it. */
 
 .egwpic {
     display: Flex;
@@ -1125,11 +1142,11 @@ label {
     position: relative;
     top: 60px;
     left: 20px;
-    padding: 5%;
+    padding: 1% 0%;
 }
 
 
-/********************Format figcaption under EGW's picture.***************************************/
+/*Format figcaption under EGW's picture.*/
 .egwpic figcaption {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 0.75rem;
@@ -1137,17 +1154,30 @@ label {
     text-align: center;
     color: #d9d9d9;
     padding: 3%;
+  
 } 
 
+/*Push .egwpic h2 (birth and death dates) off the .egwpic figcaption.*/
+.egwpic h2 {
+    position: relative;
+    top: 5px;
+}
 
 
 
 
-/****************************Move pic of Eden School down on the page.***************************************/
-.eden {
+/*Move pic of Eden School down on the page. Make the pic of Eden school responsive by adding width/height.*/
+.eden img {
     position: relative;
     top: 70px;
     margin-bottom: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
 }
 
 .eden figcaption {
@@ -1159,7 +1189,7 @@ label {
     padding: 3%;
 }
 
-/**************************************Format pic of EGW Obit*************************************************/
+/*Format pic of EGW Obit*/
 .egwobit {
     display: flex;
     flex-direction: column;
@@ -1184,7 +1214,7 @@ label {
 
 }
 
-/***************************Push main down to make room for greenheader to expand.******************************/
+/*Push main down to make room for greenheader to expand.*/
 main {
     position: relative;
     top: 10px;
@@ -1192,7 +1222,7 @@ main {
    
 }
 
-/********* Format h3 headers in .egwmain******************************************************************************************/
+/* Format h3 headers in .egwmain*/
 
 h3 {
     color: #1B341e;
@@ -1200,10 +1230,10 @@ h3 {
 }
 
 
-/******************************Used class names for scroll-indicators from .whchtml for scroll-indicators on egw.html page 3 formatting.*********************************************/
+/*********Used class names for scroll-indicators from .whchtml for scroll-indicators on egw.html page 3 formatting.*********************************************/
 
 
-/*******Format paragraphs in .egwmain. *******************************************************************************************/
+/*Format paragraphs in .egwmain.*/
 .egwmain p {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
     font-size: 1rem;
@@ -1212,9 +1242,119 @@ h3 {
     margin-right: 5%;
 }
 
-/********************Put margins on findagrave link. **********************************************************************/
+/*Put margins on findagrave link. */
 .egwmain a {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
 }
+
+/******************************************************Media Queries for egw.html page 3 start here.*********************************************/
+/*Tablet size screen starts at 744px*/
+@media screen and (min-width:744px) {
+
+
+    /*Left .egwpic, .egoobit and .eden in column format. Not enough room to fit pics in space.*/
+
+  /*Move birth and death dates off egwpic figcaption.*/
+    /* .egwpic h2 {
+        position: relative;
+        top: 10px;
+    } */
+  
+    /*Move eden figcaption down a little.*/
+    /* .eden figcaption {
+        position: relative;
+        top: 22px;
+    } */
+
+    /* .egwobit {
+        position: relative;
+        bottom: 25px;
+    } */
+
+    /*Close white gap between main and header sections.*/
+    /* main {
+        margin-top: -5%;
+    }   */
+
+    .egwsignature {
+        position: relative; 
+        left: 18px;
+        margin-bottom: -5%;
+       }
+       
+        /* Put egwpic and figcaption in row format.*/
+        .egwpic img {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 275px;
+            height: auto;
+            margin-left: 1%;
+        }
+    
+        /*Move birth and death dates to make room for egwpic.*/
+        .egwpic h2 {
+            position: relative;
+            top: 25px;
+            
+            
+        }
+    
+    
+        /*Move pic of Eden school to the left of egwpic.*/
+        .eden img {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            position: relative;
+            top:-375px;
+            left: 38px;
+            margin-left: 1%;
+            width: 275px;
+            height: auto;
+        }
+    
+        .eden figcaption {
+            position: relative;
+            top: -430px;
+            left: -300px;
+        }
+    
+    
+        /*Move pic of egwobit to the left of egwpic.*/
+        .egwobit img {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+            bottom: 840px;
+            right: -330px;
+        
+            margin-right: 5%;
+            width: 275px;
+            height: auto;
+        }
+    
+        .egwobit figcaption {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+            top: -820px;
+            right: -335px;
+        
+        }
+    
+        .greenheader3 {
+            min-height: 300px;
+            margin-bottom: -50%;
+        }
+    
+    }
+
+
+/**********************************************************1024px media query starts now.************************/
+/*Screen Size of desktop starts with 1024px for EGW Page 3*/
+/* No media query at 1024 px needed.  Works with 744 instructions. 
