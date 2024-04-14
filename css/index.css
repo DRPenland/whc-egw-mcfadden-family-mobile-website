@@ -1175,10 +1175,6 @@ label {
     height: auto;
 }
 
-.responsive {
-    width: 100%;
-    height: auto;
-}
 
 .eden figcaption {
     font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
@@ -1254,30 +1250,6 @@ h3 {
 @media screen and (min-width:744px) {
 
 
-    /*Left .egwpic, .egoobit and .eden in column format. Not enough room to fit pics in space.*/
-
-  /*Move birth and death dates off egwpic figcaption.*/
-    /* .egwpic h2 {
-        position: relative;
-        top: 10px;
-    } */
-  
-    /*Move eden figcaption down a little.*/
-    /* .eden figcaption {
-        position: relative;
-        top: 22px;
-    } */
-
-    /* .egwobit {
-        position: relative;
-        bottom: 25px;
-    } */
-
-    /*Close white gap between main and header sections.*/
-    /* main {
-        margin-top: -5%;
-    }   */
-
     .egwsignature {
         position: relative; 
         left: 18px;
@@ -1297,9 +1269,7 @@ h3 {
         /*Move birth and death dates to make room for egwpic.*/
         .egwpic h2 {
             position: relative;
-            top: 25px;
-            
-            
+            top: 25px; 
         }
     
     
