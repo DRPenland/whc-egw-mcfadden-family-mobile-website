@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body id="page5">
+        <header>
+            <!--The navigation was physically above the header in the mockup-->
+            <nav>  
+                <img src="images/home-page/mcfadden-crest.png" alt="McFadden Crest" width="75" height="100">
+                <label for="hamburger-check">&#9776;</label>
+                <input type="checkbox" id="hamburger-check" name="hamburger-check">
+                <ul class="main-nav">
+                    <li class="show-sub"><a href="index.html">HOME</a>
+                        <ul class="sub-nav">
+                            <li><a href="contact-form.html">Contact Form</a></li>
+                            <li><a href="#">Buffalo Forge</a></li>
+                        </ul>
+                    </li>
+                    <li class="show-sub"><a href="#">PATRIARCH</a>
+                        <ul class="sub-nav">
+                             <li><a href="whc.html">William McFadden</a></li>
+                        </ul>
+                    </li>
+                    <li class="show-sub"><a href="#">MATRIARCH</a>
+                        <ul class="sub-nav">
+                            <li><a href="egw.html">Ellen McFadden</a></li>
+                        </ul>
+                    </li>
+                    <li class="show-sub"><a href="#">CHILDREN</a>
+                        <ul class="sub-nav">
+                            <li><a href="lula.html">Lula McFadden</a></li>
+                            <li><a href="#">Alice McFadden</a></li>
+                            <li><a href="#">Willie McFadden</a></li>
+                            <li><a href="#">Edward McFadden</a></li>
+                            <li><a href="#">Melissa McFadden</a></li>
+                            <li><a href="#">John McFadden</a></li>
+                            <li><a href="#">Emma McFadden</a></li>
+                            <li><a href="#">George McFadden</a></li>
+                            <li><a href="#">Robert McFadden</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h1>Contact Form</h1>
+        </header>
+        <main>
+            <p>If you might be a McFadden relative and would like to drop us a note, please fill out the form below.</p>
+            <br/>
+            <form action="submitme.php" method="post">
+                <fieldset name="contact information">
+                    <legend>Contact Information</legend>
+                    <label class="view-label fn" for="firstname">First Name</label>
+                    <input autofocus required type="text" name="firstname" pattern="[A-Za-z] {1, 20}" id="firstname" maxlength="20">    
+                    <br/>
+                    <label class="view-label ln" for="lastname">Last Name</label>
+                    <input required type="text" name="lastname" pattern="[A-Za-z] {1, 20}"  id="lastname" maxlength="20">
+                    <br/>
+                    <label class="view-label em"  for="email">Email</label>
+                    <input type="email" name="email" placeholder="user@domain.com" pattern="^.+@.+$" id="email" required autocomplete="on">
+                    <br/>
+                    <label class="view-label mes" for="message">Message</label>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <textarea name="message" rows="15" cols="50" maxlength="600" placeholder="Write message here...."></textarea>
+                    <button class="submit-form" type="submit">Submit</button>&nbsp;&nbsp;<button class="reset-form" type="reset">Reset</button><br/>
+                </fieldset>
+            </form>
+            <footer>
+                <!--This section is the footer.  The background color is light gray. It contains back to top link and contact form link.-->
+                <div>
+                <p class ="top5"><a href="#top">BACK TO TOP</a></p><p class="contact5"><a href="#">CONTACT US HERE!</a></p>
+                </div>
+            </footer>
+    
+        </main>
+    </body>
