@@ -60,14 +60,13 @@
                     <input required type="text" name="lastname" pattern="[A-Za-z] {1, 20}"  id="lastname" maxlength="20">
                     <br/>
                     <label class="view-label em"  for="email">Email</label>
-                    <input type="email" name="email" placeholder="user@domain.com" pattern="^.+@.+$" id="email" required autocomplete="on">
+                    <input type="email" name="email" pattern="^.+@.+$" id="email" required autocomplete="on">
+                    <!--removed placeholder="user@domain.com" from input email because I could not get the placeholder to format correctly during responsiveness.-->
                     <br/>
-                    <label class="view-label mes" for="message">Message</label>
+                    <label class="view-label mes" for="message">Message</label><button class="scrollcf">&lt;</button>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
-                    <textarea name="message" rows="15" cols="50" maxlength="600" placeholder="Write message here...."></textarea>
+                    <textarea id="message" name="message" rows="15" cols="50" maxlength="600" placeholder="Write message here...."></textarea>
                     <button class="submit-form" type="submit">Submit</button>&nbsp;&nbsp;<button class="reset-form" type="reset">Reset</button><br/>
                 </fieldset>
             </form>
