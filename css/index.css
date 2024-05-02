@@ -216,6 +216,19 @@ header h1 {
     margin-bottom: 5%;
 }
 
+/*Create transition on McFadden name only in h1 header on all pages. Make the McFadden name turn light green and get bigger on hover.*/
+.trans {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #d9d9d9;
+    transition: width, color 2s;
+}
+
+.trans:hover {
+   font-size: 5rem;
+    color: #A5BF6B;
+}
+
 main {
     /* background-color: #A5BF6B; */
     width: 100%;
@@ -492,12 +505,12 @@ footer div {
     }
 }
 
+
+/* ********************************************************************************** */
 /* MEDIA QUERIES FOR HOMEPAGE STARTS HERE*/
 
 /*default styles here, targets mobile first for screens under 480px*/
 
-
-/* ********************************************************************************** */
 @media screen and (min-width:480px) {
 
     label {
@@ -884,14 +897,6 @@ header h1 {
     margin-right: 5%;
 }
 
-/*Formats Findagrave link at bottom of .whcmain section.*/
-.whcmain a {
-    color: #406833;
-    margin-left:5%;
-    margin-bottom: 5%;
-    margin-right:5%;
-}
-
 /*Background color for the .whcfamily section.*/
 .whcfamily {
     background-color:#A5BF6B;
@@ -975,15 +980,27 @@ header h1 {
     font-weight: bold;
 }
 
-.top {
+/*Formats Findagrave link at bottom of .whcmain section.*/
+.whcmain a {
+    color: #406833;
+    margin-left:5%;
+    margin-bottom: 5%;
+    margin-right:5%;
+}
+
+.whcmain a:hover {
+    color:#a5Bf6B;
+    background-color: #1B341e;
+}
+.top a{
     position: relative;
     bottom: 15px;
     font-size: 1.5rem;
 }
 
-.contact {
+.contact a {
     position: relative;
-    bottom: 40px;
+    bottom: 20px;
     font-size: 1.5rem;
 }
 
@@ -1187,15 +1204,13 @@ label {
 }
 
 /*Format pic of EGW Obit*/
-.egwobit {
+.egwobit img {
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
-    top: 97px;
-    left: 50px;
+    top: 7px;
     width: 100%;
-    padding-left: 3%;
     margin-top: 5%;
     margin-bottom: 5%;
     /* background-color: #1b341e; */
@@ -1213,6 +1228,7 @@ label {
     padding: 3%;
     position: relative; 
     top: -5px;
+    margin-bottom: 5%; 
     /* background-color: #1b341e; */
 
 }
@@ -1230,6 +1246,7 @@ main {
 h3 {
     color: #1B341e;
     margin-left: 5%;
+   
 }
 
 
@@ -1245,11 +1262,18 @@ h3 {
     margin-right: 5%;
 }
 
-/*Put margins on findagrave link. */
+/*Put margins on findagrave link. Color text. */
 .egwmain a {
+    color: #406833;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
+}
+
+/*Put hover color on findagrave link.*/
+.egwmain a:hover {
+    color: #a5Bf6B;
+    background-color: #1B341e;
 }
 
 /******************************************************Media Queries for egw.html page 3 start here.*********************************************/
@@ -1261,6 +1285,7 @@ h3 {
         .greenheader3 h2 {
             position: relative;
             bottom: 50px;
+            min-height: 200px; 
     
         }
 
@@ -1269,10 +1294,17 @@ h3 {
         margin-bottom: -5%;
        }
        
+       .eden img {
+        margin-bottom: 8%; 
+        padding-bottom: 5%;
+       }
     
         .eden figcaption {
+            color: #d9d9d9;
             position: relative;
-            top: 25px;
+            bottom: -65px; 
+            margin-bottom: 5%; 
+            padding-bottom: 5%; 
            
         }
 
@@ -1293,12 +1325,14 @@ h3 {
         .greenheader3 {
             min-height: 1200px;
             width: 100%;
+            /* margin-bottom: -5%; */
+            /* padding-bottom: 8%;  */
         }
 
         /*Close white gap between main and .greenheader3.*/
-        main {
-            margin-top: -8%;
-        }
+      .birth3 {
+       margin-top: -5%; 
+      }
     }
 
 
@@ -1352,12 +1386,336 @@ h3 {
 
     /********************************Coding for lula.html page 4 starts here. ********************************************************/
 
+    /* Center h1 header Mary Lula McFadden so McFadden does not go off the page.*/
+#top {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Add space between nickname and photo of Lula.*/
+.nick {
+    padding-bottom: 5%;
+}
+
+/*Negative margin-bottom on greenheader4 eliminates white gap between lulamain and greenheader4.*/
+.greenheader4 {
+    background-color: #1B341e;
+    min-height: 200px; 
+    margin-bottom: -3%;
+    padding-top: 3%;
+    padding-bottom: 8%; 
+}
 
 
+/*Center .lulapic div photo*/
+.lulapic img {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    left: 60px; 
+    padding-bottom: 3%;
+}
+
+/*Format the figcaption in lulapic div.*/
+.lulapic figcaption {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: #d9d9d9;
+    padding-left: -8%;
+    padding-bottom: 3%;
+}
+
+/*Add padding to birth and death dates.*/
+.dates4 {
+    padding-bottom: 5%;
+}
+
+/*Format /position image Lula's marriage certificate.*/
+.lula-mar img{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    padding-left: 5%;
+    position: relative; 
+    left: 60px; 
+}
+
+/*Format /position Lula's marriage certificate figcaption.*/
+.lula-mar figcaption{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: #d9d9d9;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 5%; 
+}
+
+/*Format/position Lula's obit img.*/
+.lulaobit img {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    padding-left: 5%;
+    position: relative; 
+    left: 25px; 
+}
+
+/*Format/position Lula's obit figcaption.*/
+.lulaobit figcaption {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: #d9d9d9;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 5%; 
+}
+
+/*Top margin between lulamain and greenheader4.*/
+.lulamain  {
+    margin-top: 5%; 
+}
 
 
+/*Format .down4 scroll indicator next to Birth header. Position it on screen.*/
+.down4 {
+    position: relative; 
+    left: 270px; 
+    bottom: 30px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+}
+
+/*Format the lulamain paragraphs - give right and left margins.*/
+.lulamain p {
+    margin-left: 5%; 
+    margin-right: 5%; 
+}
+
+/*Format/position second scroll-indicator at beginning of kids ordered list.*/
+.arrow4 {
+    position: relative; 
+    left: 270px; 
+    bottom: 30px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    }
+
+/*give right and left margins to lulafamily.*/
+.lulafamily ol {
+    margin-left: 10%; 
+    margin-right: 5%; 
+}
+
+/*Add spacing between indiidual line items of ordered list of Lula's childrens names.*/
+.lulafamily li {
+    padding-bottom: 3%; 
+
+}
+
+/*Format/position third scroll-indicator at end of kids ordered list.*/
+.scroll4 {
+    position: relative; 
+    left: 270px; 
+    bottom: 5px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    }
+
+/*Format / color findagrave link. */
+.lulamain a {
+    margin-left: 5%; 
+    color: #406833; 
+    margin-bottom: 5%; 
+}
+
+.lulamain a:hover {
+    color: #a5bf6b; 
+    background-color: #1b341e;
+}
+
+/*format contact a link.  It was hanging off page at 360 degree screen width before.*/
+.contact4 a {
+    color: #406833;
+    word-wrap: break-word;
+    float: right; 
+    position: relative; 
+    right: -32px; 
+    bottom: 40px; 
+    font-size: 1.5rem; 
+
+}
+
+.contact4 a:hover {
+    color: #a5Bf6B;
+    background-color: #1B341e;
+}
+
+/*Animate Contact Link By Rocking It. Had to reapply to .contact4 vs original .contact.*/
+.contact4 {
+    animation-name: rock-me;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count:infinite;    
+   }
+   
+   @keyframes rock-me {
+       from {
+           transform: rotate(-2deg);
+       }
+       to {
+           transform: rotate(2deg);
+       }
+   }
+   
+/***********************************************media queries for lula.html page 4 starts here. All previous commands were for screen width 360.**********************************/
+
+/*Tablet size screen starts at 744px.*/
+@media screen and (min-width:744px) {
+
+    /*Eliminate white gap between grey nav header and .greenheader4.*/
+.greenheader4 { 
+    margin-top: -5%; 
+    padding: 10%; 
+    border: 2px solid lightskyblue;
+}
+
+/*Postion h1 so it does not cover up daughter and nickname.*/
+.greenheader4 h1 {
+    margin-bottom: 0%; 
+    margin-top: -10%; 
+    padding-top: -5%;  
+}
+
+/*Margin to position daughter and nickname so can see it.  It was hidden under h1.*/
+.dau4 {
+    position: relative; 
+    top: 30px; 
+    padding: 5%; 
+    margin-top: 0%; 
+
+} 
+
+/*Move .lulapic img over to the center.*/
+.lulapic img{
+    margin-top: 5%; 
+    position: relative; 
+    left: 180px; 
+
+}
+
+/*Move .lula-mar img over to the center.*/
+.lula-mar img {
+    position: relative; 
+    left: 170px;
+}
+
+/*Move .lulaobit img over to the center.*/
+.lulaobit img {
+    position: relative; 
+    left: 135px; 
+}
+
+/*Remove the white gap between greenheader4 and main by reducing top margin.*/
+main {
+    margin-top: -20%; 
+}
+
+/*Position first scroll indicator near birth/parents header.*/
+.down4 {
+    position: relative; 
+    left: 650px; 
+}
+
+/*Position second scroll indicator near children header.*/
+.arrow4 {
+    position: relative; 
+    left: 650px; 
+}
+
+/*Position third scroll indicator near end of children's ordered list.*/
+.scroll4 {
+    position: relative; 
+    left: 650px; 
+}
+
+/*Expand height of footer to position a links.*/
+#page4 footer {
+    min-height: 180px;
+    width: 107%;
+}
+
+.contact4 a {
+    position: relative; 
+    right: -15px; 
+}
 
 
+/**********************************************************1024px media query for lula.html page 4 starts now.************************/
+/*Screen Size of desktop starts with 1024px for EGW Page 3*/
+@media screen and (min-width:1024px) {
+
+
+    /*Remove white gap between header/ nav and .greenheader4.*/
+    .greenheader4 {
+        margin-top: -15%; 
+    }
+
+    /*Center lula's image. */
+    .lulapic img {
+        position: relative; 
+       left: 300px; 
+    }
+
+    /*Center Lula's marriage certificate image.*/
+    .lula-mar img {
+        position: relative;
+        left: 280px; 
+    }
+
+    /*Center Lula's obit img.*/
+    .lulaobit img {
+        position: relative; 
+        left: 250px; 
+    }
+
+    /*Position first scroll-indicator over to the right.*/
+    .down4 {
+        position: relative; 
+        left: 870px; 
+    }
+
+       /*Position second scroll-indicator over to the right.*/
+       .arrow4 {
+        position: relative; 
+        left: 870px; 
+    }
+
+       /*Position third scroll-indicator over to the right.*/
+       .scroll4 {
+        position: relative; 
+        left: 870px; 
+    }
+}
 
 /***********************************Coding for lula.html page 4 ends here.****************************************************/
 
