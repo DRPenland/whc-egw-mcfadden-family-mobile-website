@@ -1,0 +1,2448 @@
+@font-face {
+    font-family: 'Croissant One';
+    src: url(.../fonts/CroissantOne-Regular.ttf);
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-Regular.ttf);
+    font-style:normal;
+    font-weight:400;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-Italic.ttf);
+    font-style:italic;
+    font-weight:400;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-SemiBold.ttf);
+    font-style:normal;
+    font-weight:700;
+}
+
+@font-face {
+    font-family: 'Fira Sans Condensed';
+    src: url(../fonts/FiraSansCondensed-BoldItalic.ttf);
+    font-style:normal;
+    font-weight:900;
+}
+
+/* RESET STYLESHEET */
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Original CSS commands are set for mobile first screen width of 360px*/
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Setting a minimum height so that the header can grow and changing the background color.*/
+header {
+    min-height: 125px;
+    width: 100%;
+    /* background-color: #d9d9d9; */
+}
+
+/*Nav*/
+
+/*changing the color and size of hamburger icon.*/
+/* label is for hamburger menu icon only.*/
+label{
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 15%; 
+    font-size: 4.5rem;
+    margin: 5%;
+    padding-right:5%;
+    position: relative; 
+    left: 270px;
+    bottom: 140px;
+    color: #406833;
+    cursor: pointer; 
+}
+
+/*display none for #hamburger makes checkbox disappear */
+#hamburger-check {
+    display: none;
+    /* position: absolute;
+    top: 20px;
+    width: 30%;
+    margin: 5%; */
+}
+
+/*Leave margin-bottom at -3%. Causes a problem when try to reduce gray area when at media query 1024px. Causes eader nav and main nav not flush.*/
+header nav {
+    background-color: #D9d9d9;
+    width: 100%;
+    min-height: 125px;
+    /* font-size:1.5rem; */
+    margin-bottom: -3%;
+   
+} 
+
+/*header nav img is for McFadden crest logo*/
+header nav img{
+    width: 30%;
+    height: auto;
+    margin: 3% 3%;
+    padding-right: 5%;
+}
+
+/*Style the Navigation List*/
+/*Display none under header nav ul makes list disappear.*/
+ul {
+    font-family: 'Croissant One', 'serif';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 75px;
+    background-color: #d9d9d9;
+    width:100%;
+    display: none;
+    z-index: 999;
+    /* position: relative; 
+    bottom: 170px;
+    right: 30px; */
+
+}
+
+ul li {
+    list-style-type: none;
+    padding: 2% 0;
+    /* width: 100%; */
+    text-align: center;
+    /* outline: 1px solid greenyellow; */
+}
+
+ul li a:hover {
+    background-color: #1b341e;
+    color: #a5Bf6B;
+    text-decoration: underline;
+}
+
+ul li a{
+    color: #406833; 
+    text-decoration: none;
+    /* font-size: 1.5rem; */
+    font-weight: 900;
+}
+
+/*This code says when checkmark is checked, I want you to find next sibling which is the ul and I want you to display it.*/
+#hamburger-check:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+}
+
+/*Push up main-nav to start further up on the page.*/
+
+.main-nav {
+    font-family: 'Croissant One', 'serif';
+    font-weight: 900;
+    font-size: 1.25rem;
+    position: relative;
+    bottom: 135px;
+    width: 125%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    margin-bottom: 0%;
+
+}
+
+/*This sub-nav makes the sub-menu disappear until hover over link. Otherwise subnav shows all the time.*/
+
+.sub-nav {
+    display:none;
+}
+
+/*Sub-navigation*/
+/*Displays sub nav list when hover over link.*/
+.show-sub:hover .sub-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #d9d9d9;
+    /* padding-left: 3%; */
+    list-style-type: none;
+}
+
+
+.show-sub, .sub-nav {
+    /* min-height: 100px; */
+    width: 100%;
+    height: auto; 
+} 
+
+
+/*Space between .sub-nav line items*/
+.sub-nav li {
+    margin-top: -2%;
+    margin-bottom: 1%;
+    padding: 2%;
+    line-height: 1;
+}
+
+/*Reduce top margin on .greenheader to eliminate white space between .greenheader and light gray header on home page at 360 screen width.*/
+.greenheader {
+    margin-top: -5%;
+}
+
+/*Title of the website goes here.*/
+header h1 {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    /* line-height: 1; */
+    color: #d9d9d9;
+    text-align: center;
+    position: relative; 
+    top: 15px;
+    background-color: #1B341e;
+    width: 100%;
+    min-height: 275px;
+    padding: 5%;
+    margin-top: -5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+/*Create transition on McFadden name only in h1 header on all pages. Make the McFadden name turn light green and get bigger on hover.*/
+.trans {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #d9d9d9;
+    transition: width, color 2s;
+}
+
+.trans:hover {
+    font-style: italic;
+    font-size: 5rem;
+    color: #A5BF6B;
+}
+
+main {
+    /* background-color: #A5BF6B; */
+    width: 100%;
+}
+
+h2 {
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    /* line-height: 1; */
+    color: #d9d9d9;
+    text-align: center;
+}
+
+
+/*Hero image of Old Mill*/
+.image-banner img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -8%;
+    margin-bottom: -3%;
+    /* background-image: url(../images/home-page/pexels-daniel-shapiro-17946182.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center center; */
+}
+
+/* Photo Citation goes here as figcaption for Old Mill image */
+ .image-banner figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    padding: 3%;
+    position: relative;
+    top: 5px;
+    /* border: 1px solid purple; */
+}
+
+/* Section 2 Starts Here.  Family Summary Section*/
+
+/*Family Summary section header*/
+
+.section2 {
+    min-height: 450px;
+    width: 100%;
+    margin-top: -52px;
+    background-color: #A5BF6B;
+}
+
+.section2 h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    top: 50px;
+    color: #1b341e;
+    text-transform: uppercase;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 0%;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+
+
+/*Family Summary paragraph*/
+.section2 p {
+  font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+  font-size: 1rem;
+  font-variant: normal;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+  top: 40px;
+  color: black;
+  padding: 5%;
+  margin-right: 5%;
+  text-align: left;
+  /* margin: auto; */
+}
+
+/*Scroll down indicator icon*/
+.scroll-indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -5px;
+    left: 290px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+}
+
+/* Map of State of VA goes in section 3 */
+
+.section3 {
+    width: 100%;
+    /* height: 220px; */
+    background-color: #1b341e;
+}
+
+/*Map of State of VA*/
+.section3 img{
+    width: 100%;
+    height: 198px;
+    margin-bottom: 2%;
+    padding: 0px;
+    border: 5px solid black;
+}
+
+/*Figcaption for Map of State of VA*/
+.map figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #a5bf6b;
+    padding: 3%;
+}
+
+/* Section 4 Location Information starts here.*/
+
+.section4 {
+    width: 100%;
+    height: 315px;
+    background-color: #1B341e;
+    /* border: 1px solid aqua; */
+}
+
+
+/*Location Section header*/
+.section4 h3 {
+    color: #a5bf6b;
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    position: relative;
+    top: 45px;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    margin-left: 0%;
+    margin-right: 5%;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+
+/*Location section paragraph*/
+.section4 p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-variant: normal;
+    font-weight: 400;
+    color: #a5bf6b;
+    position: relative;
+    top: 25px;
+    padding-top: 5%;
+    padding-left: 5%;
+    margin-right: 5%;
+    height: 50px;
+}
+
+/* Section 5 about Religion starts here. */
+
+.section5 {
+    height: 285px;
+    width: 100%;
+    margin: auto;
+    background-color: #A5BF6B;
+    /* border: 1px solid red; */
+}
+
+/*Religion section header*/
+.section5 h3{
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1b341e;
+    padding: 5%;
+    margin-left: 0%;
+    text-align: left;
+    /* border: 1px solid aqua; */
+}
+
+/*Format/position the second scroll-indicator known as .scroll1 near the Religion heading.*/
+.scroll1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -45px;
+    left: 290px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -5%; 
+}
+
+/*Religion section paragraph.   Push the paragraph up closer to scroll1 indicator.*/
+.section5 p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-variant: normal;
+    font-weight: 400;
+    color: black;
+    padding-bottom: 8px;
+    margin-top: -4%; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    /* border: 1px solid black; */
+}
+
+/*Footer section starts here.*/
+
+footer {
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 100px;
+    padding: 5%;
+}
+
+footer div {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* padding: 5%; */
+    text-align: left;
+    margin: 5%;
+}
+
+/*Back to Top Link*/
+.top a {
+    color: #406833;
+    margin-left: 5%;
+    position: relative; 
+    left: -10%;
+    top: 10px; 
+}
+
+.top a:hover{
+    color: #a5bf6b;
+    background-color: #1b341e;
+}
+
+/*Contact information link*/
+.contact a {
+    color: #406833;
+    float: right; 
+    position: relative;
+    right: -5%; 
+}
+
+.contact a:hover{
+    color: #a5bf6b;
+    background-color: #1b341e;
+}
+
+/*Animate Contact Link By Rocking It*/
+.contact {
+ animation-name: rock-me;
+ animation-duration: 1s;
+ animation-direction: alternate;
+ animation-iteration-count:infinite;    
+}
+
+@keyframes rock-me {
+    from {
+        transform: rotate(-2deg);
+    }
+    to {
+        transform: rotate(2deg);
+    }
+}
+
+
+/* ********************************************************************************** */
+/* MEDIA QUERIES FOR HOMEPAGE STARTS HERE*/
+
+/*default styles here, targets mobile first for screens under 480px*/
+
+@media screen and (min-width:480px) {
+
+    label {
+        position: relative;
+        left: 340px;
+        bottom: 200px;
+    }
+
+    /*Positions scroll indicator icon*/
+    .scroll-indicator {
+        position: relative;
+        top: 25px;
+        left: 390px;
+    }
+}
+
+/* ********************************************************************************** */
+/*HOMEPAGE MEDIA QUERY*/
+/*Tablet size screen starts at 744px*/
+@media screen and (min-width:744px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 150px;
+    }
+
+
+    header nav img {
+        width: 20%;
+        height: auto;
+        position: relative;
+        top: -5%;
+        margin-bottom:3%;
+        z-index:1000;
+    }
+
+    header nav {
+        min-height: 25px;
+        margin-bottom: 5%;
+        
+        
+    }  
+
+    /*Code to change over navigation from hamburger menu to ul*/
+    /*this makes the hamburger menu icon disappear.*/
+
+    label {
+        display: none;
+    }
+    
+
+    /*This code makes nav ul display in a row not column.*/
+    ul {
+        position: relative;
+        top: 5%;
+        z-index:999;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 75px;
+    }
+
+    ul li {
+        padding-bottom:0;
+        padding-right: 1%;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-direction: row;
+        position:relative;
+        bottom: 35px;
+        width: 100%;
+        margin-left: -3%;
+
+    }
+
+    /*Sub-navigation content (hidden by default). Had to set display to none to get it to disappear and not show constantly.*/
+    .sub-nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 0px;
+        left: 30px;
+        font-size: 1rem;
+        padding-bottom: 0%;
+    }
+
+    /*Add bottom margin to greenheader to eliminate white gap between greenheader and image-banner img at 744 screen width.*/
+    .greenheader {
+        margin-bottom: -2%;
+    }
+
+    /*margin top to close white gap between h1 and nav.*/
+    header h1 {
+        position: relative; 
+        top: 30px;
+        min-height: 200px;
+        margin-top: -7%;
+        margin-bottom: 3%;
+    }
+
+    /*Position so McFadden Family in h1 is not covered up by image of Old Mill.*/
+    .image-banner img {
+        position: relative;
+        top: 50px;
+    }
+
+    .image-banner figcaption {
+     position: relative;
+     top: 60px;
+     margin-bottom: 5%; 
+    }
+
+
+    .section2 {
+       min-height: 330px;
+    }
+
+    /*Family Summary Section header*/
+    .section2 h3 {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        }
+
+    .section2 p {
+        margin-top: -5%;
+    } 
+
+      /*Positions 1st scroll indicator icon on home page below Family Summary paragraph.*/
+      .scroll-indicator {
+        position: relative;
+        top: 5px;
+        left: 650px;
+    }
+
+    /*VA Map div class .maps controls 3 map images.*/
+    .maps {
+        display: flex;
+        flex-direction: row;
+        }
+
+
+    /*Figcaption of 3rd .map. Flexbox command won't work on figcaption here.*/
+    .map figcaption {
+        width: 100%;
+        position: relative;
+        right: 250px;
+        }
+
+    .section4 {
+        height: 250px;
+        margin: 0%;
+        border: 1px solid white;
+        margin-top: -5%;
+        }
+   
+
+        /*Section 4 Location heading*/
+    .section4 h3 {
+        padding-top: 0%;
+        padding-bottom: 3%;
+        }
+
+        /*Location Summary Paragraph*/
+    .section4 p {
+        padding-right: 5%;
+        }
+
+
+    /*Section 5 is the Religion section*/
+    .section5 {
+        height: 235px;
+        }
+
+    /*Format the 2nd scroll indicator .scroll1 on the home page near the religion header.*/
+    .scroll1 {
+        position: relative; 
+        left: 650px;
+        top: -70px;  
+    }
+
+    /*Section 5 Religion paragraph*/
+    .section5 p{
+        padding-top: 0%;
+        }
+    /*Attempt to reduce gray footer on right side of screen where it goes off the canvas. Didn't work.*/
+    /*Doesn't work when you put in negative right margin for footer div either.*/
+    footer {
+       padding-right: 0%; 
+       margin-right: 0%; 
+    }
+
+
+    /* Position top link in center of footer.*/
+    .top a {
+        position: relative;
+        top: -40px;
+        left: 15px; 
+        margin-left: -2%;  
+        }
+
+    .contact a {
+        position: relative;
+        top: -70px;
+        right: 30px; 
+        margin-right: 5%;
+        }
+    }
+
+    /* ********************************************************************************************************************/
+    /*HOMEPAGE MEDIA QUERY*/
+    /*Screen Size of desktop starts with 1024px*/
+@media screen and (min-width: 1024px) {
+
+    header nav img{
+        width: 15%;
+    }
+
+    label {
+        position: relative;
+        left: 800px;
+    }
+
+    /*Close white gap between nav and h1. Leave at -14% to make greenheader flush with light gray nav at 1024 screen with.*/
+    header h1 {
+        margin-top: -14%;
+    
+    }
+
+    .image-banner figcaption {
+        position: relative;
+        top: 60px;
+        margin-top: -3%;
+    }
+
+    /*Family Summary Section*/
+    .section2 {
+        height: 325px;
+    }
+
+    .section2 h3 {
+       padding-top: 3%;
+       padding-bottom: 3%;
+    }
+
+    /*Position the first scroll indicator at bottom of family summary for 1024 screen width.*/
+    .scroll-indicator {
+        position: relative;
+        top: -10px;
+        left: 945px;
+    }
+
+    .map figcaption {
+        position: relative;
+        right: 340px;
+    }
+
+    /*Location Summary Section*/
+    .section4 h3{
+        padding-bottom: 1%;
+    }
+
+    .section4 p {
+      padding-top: 3%;
+    }
+
+    .section5 h3{
+        padding-bottom: 3%;
+    }
+
+    /*Position second scroll-indicator .scroll1 further to the right from Religion heading.*/
+    .scroll1 {
+        position: relative; 
+        left: 945px; 
+    }
+
+    /*Move the top link back to center of the footer div.*/
+    .top a {
+        position: relative;
+        top: -70px; 
+    } 
+
+    /*Move the contact link to center of the footer div.*/
+    .contact a{
+        position: relative;
+        top: -95px; 
+    }
+} 
+
+/**************************************************************************************************************************************/
+/*******************************PAGE 2 WHC McFadden Page Commands Start Now ***********************************************************/
+
+/*greenheader2 is the dark greenheader on page 2, whc.html. Negative bottom margin is to fill in white gap between greenheader2 and main.*/
+/*Margin-top  and padding top is to eliminate between greenheader and light gray header nav.*/
+.greenheader2 {
+    background-color: #1b341e;
+    min-height: 75px;
+    padding-bottom: 5%; 
+    margin-bottom: -5%; 
+    margin-top: -5%;
+    padding-top: 5%; 
+}
+
+
+/*Title of the website goes here.*/
+header h1 {
+    font-size: 3rem;
+    position: relative; 
+    top: 15px;
+}
+
+/*giving size, color to subheadings patriarch, nickname on page 2 whc.html.*/
+.greenheader2 h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 25px;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d9d9d9;
+
+}
+
+/* Make the div's of the pic of signature, whcpic,  obituary and reminiscent articles flex.*/
+.whcsignature .whcpic .obit .rem {
+    display: flex;
+    flex-direction: column;
+    padding: 5%; 
+}
+
+/*Center the pic of WHC McFadden.*/
+.whcpic {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+/*Size and color of the birth and death dates under WHC's pic.*/
+.whcpic p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.5rem;
+    padding:5%;
+    color: #d9d9d9;
+}
+
+/*Position the image of WHC's signature.*/
+.whcsignature img {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    padding: 5%; 
+    margin-left: 3%;
+    position: relative; 
+    top: 20px; 
+}
+/*Center reminiscent article in on the sides of the screen.*/
+.rem img{
+    position: relative; 
+    left: 65px;
+}
+
+/*Center the figcaption and give text size.*/
+.whcpic, .obit, .rem figcaption {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    padding:5%;
+    color: #d9d9d9;
+}
+
+/*Position figcaption citation under reminiscent article.*/
+.rem figcaption {
+    position: relative;
+    top: -5px; 
+}
+
+/*Start of the light green section with information about WHC.*/
+.whcmain {
+    background-color: #A5BF6B;
+    width: 100%;
+
+}
+
+
+/*Scroll down indicator icon next to birth parents heading at 360 screen width.*/
+.down2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 275px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -5%;
+}
+
+/*Changes all h3 headings in .whcmain except first one.*/
+.whcmain h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+/*Formatting the paragraphs under .whcmain section.*/
+.whcmain p{
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Background color for the .whcfamily section.*/
+.whcfamily {
+    background-color:#A5BF6B;
+}
+
+/*Format Children Heading*/
+.whcfamily h3 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem; 
+    text-transform: capitalize;
+    color: #1B341e;
+    margin-left: 5%;
+}
+
+/*Format .scrollindicator in .whcfamily section near Children heading at 360 screen width.*/
+.arrow2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 275px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -8%;
+}
+
+/*Formats ordered list of kidsnames.*/
+.kidsnames {
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-bottom:5%;
+}
+
+/*Formats list of h4 Children's names in .kidsnames.*/
+.kidsnames h4 {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1B341e;
+    text-decoration: none;
+}
+
+/*Ordered list line items*/
+.kidsnames li {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #000000;
+}
+
+/*Formats and positions last scroll-indicator on the page below .kidsnames.*/
+.scroll2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 275px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -8%;
+}
+
+/*Formats the download family tree button.*/
+.btn2 {
+    background-color: #d9d9d9;
+    border: none;
+    color: black;
+    width: 30%;
+    padding: 15px 18px;
+    margin-left: 10%;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:1rem;
+    font-weight: bold;
+}
+
+/*Formats Findagrave link at bottom of .whcmain section.*/
+.whcmain a {
+    color: #406833;
+    margin-left:5%;
+    margin-bottom: 5%;
+    margin-right:5%;
+}
+
+.whcmain a:hover {
+    color:#a5Bf6B;
+    background-color: #1B341e;
+}
+.top a{
+    position: relative;
+    bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.contact a {
+    position: relative;
+    bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/**************************************************PAGE 2 WHC MCFADDEN PAGE MEDIA QUERIES***********************************/
+/*Tablet size screen starts at 744px*/
+@media screen and (min-width:744px) {
+
+/*Margin-bottom makes header nav and main nav flush at 744px.*/
+header nav {
+    margin-bottom: 2%;
+}
+
+
+/*Reduce height of dark green .greenheader background-color.*/
+.greenheader2 {
+    margin-bottom: -8%;
+}
+
+/*position hamburger icon further to the right*/
+label {
+    padding-right: 0%;
+    margin-right: 0%;
+}
+
+/*Center the image of whcsignature.*/
+.whcsignature img { 
+    position: relative; 
+    left: 170px; 
+}
+
+/*Center the image of reiniscense article.*/
+.rem img{
+    position: relative; 
+    left: 268px;
+}
+
+/*Scroll down indicator icon next to birth parents heading at 744 screen width.*/
+.down2 { 
+    position: relative;
+    top: -35px;
+    left: 650px;
+    margin-right: -5%;
+}
+
+/*Format scroll-indicator in .whcfamily section near Children header at 744 screen width*/
+.arrow2 {
+    position: relative;
+    left: 650px;
+}
+
+
+/*Format last scroll-indicator on page below .kidsnames list at 744 screen width.*/
+.scroll2 {
+    position: relative;
+   left: 650px;
+}
+
+.kidsnames {
+    margin-top: 5%;
+}
+/*Closing curly brace for media inquiry at 744px*/
+}
+
+/******************************************MEDIA QUERY 1024px for WHC PAGE 2 starts here*************************************************/
+ /*Screen Size of desktop starts with 1024px for WHC Page 2*/
+ @media screen and (min-width: 1024px) {
+
+ /*Code to change over navigation from hamburger menu to ul*/
+    /*this makes the hamburger menu icon disappear.*/
+
+    label {
+        display: none;
+    } 
+    
+
+    /*This code makes nav ul display in a row not column.*/
+     ul {
+        position: relative;
+        top: 5%;
+        z-index:999;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        min-height: 75px;
+       
+    } 
+
+    ul li {
+        padding-bottom:0;
+        padding-right: 1%;
+    }
+
+    /*Make so no color gap between .main-nav and the header-nav. They are flush.The margin-bottom negative 15 causes gap from 744 media query.*/
+    header nav{
+       margin-bottom: 15%;
+    }
+
+    /*Reduce height at bottom of dark green greenheader section because images went into row no longer column. Why margin-bottom such large number. At 1024 screen width.*/
+    /*Margin top to Fills in white gap between header nav and .greenheader. Changed from - 15 to 0%.*/
+    .greenheader2 {
+        margin-bottom: -80%;
+        margin-top: -8%;
+    }
+
+    /*Re-center the image of whcsignature for 1024 screen width.*/
+    .whcsignature img { 
+    position: relative; 
+    left: 270px; 
+}
+
+    /*Position the obit div to the left of whcpic because in desktop view at 1024 screen width.*/
+    .obit {
+        display: flex; 
+        flex-direction: row; 
+        position: relative; 
+        bottom: 450px; 
+    }
+
+    /*Position the rem div to the right of the whcpic because in desktop view at 1024 screen width.*/
+    .rem {
+        display: flex; 
+        flex-direction: row; 
+        position: relative;
+        bottom: 825px; 
+        left: 475px; 
+    }
+
+    /*Position the rem figcaption further over to the right because at 1024 screen width.*/
+    .rem figcaption {
+        position: relative; 
+        left: 248px; 
+    }
+
+    /*Position the rem div to the right of whcpic because in desktop view top at 1024 screen width.*/
+    /*Position scroll-indicator next to birth parents heading. Put space between paragraph following and scroll indicator.*/
+    .down2 {
+        position: relative;
+        left: 900px;
+        margin-bottom: -3%;
+    }
+
+    /*Position scroll-indicator in .whcfamily sectionon page at 1024px screen width */
+    .arrow2 {
+        position: relative;
+        left: 900px;
+    }
+
+    /*Position third and last scroll-indicator on page at 1024px screen width.*/
+    .scroll2 {
+        position: relative;
+        left: 900px;
+    }
+    
+    /*Closing Curly Brace for Media Query 1024px.*/
+  }
+/********************************************************************************************************************************/
+/********************************************CSS Commands for page 3 egw.html starts here at 360 screen width. **************************************/
+
+
+
+/*Make greenheader3 for page 3 taller to make room for egwobit and captions. Negative margin-top is to eliminate white gap between greenheader3 and light gray header.*/
+/*margin-bottom eliminates white gap between greenheader3 and egwmain.*/
+.greenheader3 {
+    min-height: 1200px;
+    margin-bottom: -3%; 
+    margin-top: -5%; 
+    background-color: #1b341e;
+}
+
+/*giving size, color to subheadings patriarch, nickname.*/
+.greenheader3 h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: -35px;
+    font-family: 'Croissant One', 'Times New Roman', serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #d9d9d9;
+}
+
+/*Format EGW's signature*/
+
+.egwsignature {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    position: relative;
+    top: 40px;
+    padding-bottom: 5%;
+}
+
+
+/*Format EGW's picture.  Center it. */
+
+.egwpic {
+    display: Flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    width: 100%;
+    height: auto;
+    padding: 1% 0%;
+}
+
+
+/*Format figcaption under EGW's picture.*/
+.egwpic figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+  
+} 
+
+/*Push .egwpic h2 (birth and death dates) off the .egwpic figcaption.*/
+.egwpic h2 {
+    position: relative;
+    top: 5px;
+}
+
+
+
+
+/*Move pic of Eden School down on the page. Make the pic of Eden school responsive by adding width/height.*/
+/*17% margin-bottom exposes the .eden figcaption that was hidden under image at 360 wide screen.*/
+.eden img {
+    position: relative;
+    top: 70px;
+    margin-bottom: 17%;
+    width: 100%;
+    height: auto;
+}
+
+
+.eden figcaption {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 3%;
+}
+
+/*Format pic of EGW Obit*/
+.egwobit img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 7px;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    /* background-color: #1b341e; */
+}
+
+.egwobit figcaption {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 0.75rem;
+    font-style: italic;
+    text-align: left;
+    color: #d9d9d9;
+    padding: 3%;
+    position: relative; 
+    top: -5px;
+    margin-bottom: 5%; 
+    /* background-color: #1b341e; */
+
+}
+
+/*Push main down to make room for greenheader to expand.*/
+main {
+    position: relative;
+    top: 10px;
+    background-color: #A5BF6B;
+   
+}
+
+/* Format h3 headers in .egwmain*/
+
+h3 {
+    color: #1B341e;
+    margin-left: 5%;
+   
+}
+
+/*Format/ position the first scroll indicator near Birth/Parents heading at 360 wide screen.*/
+.down3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -30px;
+    left: 275px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -5%;
+}
+
+/*Format/ position the second scroll indicator near Children heading at 360 wide screen.*/
+.arrow3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 275px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -5%;
+}
+
+/*Format/ position the third scroll indicator near end of children's list at 360 wide screen.*/
+.scroll3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+    left: 275px;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    margin-bottom: -5%;
+}
+
+/*Format paragraphs in .egwmain.*/
+.egwmain p {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Put margins on findagrave link. Color text. */
+.egwmain a {
+    color: #406833;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+/*Put hover color on findagrave link.*/
+.egwmain a:hover {
+    color: #a5Bf6B;
+    background-color: #1B341e;
+}
+
+/******************************************************Media Queries for egw.html page 3 start here.*********************************************/
+/*Tablet size screen starts at 744px. Left h1 images in column format at tablet because could not fit in a row in screen width of 744px.*/
+@media screen and (min-width:744px) {
+
+
+        /*Push the h2 up closer to the h1.*/
+        .greenheader3 h2 {
+            position: relative;
+            bottom: 50px;
+            min-height: 200px; 
+    
+        }
+
+        /*Eliminate gap between matriarch and Ellen's nickname at 744 screen width.*/
+        .nick3 {
+            margin-top: -24%;
+        }
+
+
+        /*Reduce green between signature image and nickname.*/
+        .egwsignature {
+        margin-bottom: -5%;
+        margin-top: -28%;
+       }
+       
+
+       /*Reduce area between birth/death dates and eden img with margin-top.*/
+       .eden img {
+        margin-bottom: 8%;
+        margin-top: -10%;
+        padding-bottom: 5%;
+       }
+    
+       /*Reduce area between eden img and eden figcaption.*/
+        .eden figcaption {
+            color: #d9d9d9;
+            position: relative;
+            bottom: 15px; 
+            margin-bottom: -15%;
+            margin-bottom: 5%; 
+            padding-bottom: 5%; 
+           
+        }
+
+        /*Make egwobit div flex.*/
+        .egwobit {
+            display: flex; 
+        }
+
+        .egwobit img {
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: -80px;  
+        }
+ 
+        .egwobit figcaption {
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: -90px;   
+        }    
+
+        /*Figuring out white gap at bottom of .greenheader3.*/
+        .greenheader3 {
+            min-height: 1200px;
+            width: 100%;
+            /* margin-bottom: -5%; */
+            /* padding-bottom: 8%;  */
+        }
+
+        /*Close white gap between main and .greenheader3.*/
+      .birth3 {
+       margin-top: 0%; 
+      }
+
+      /*Position first scroll indicator near Birth/Parents header at 744 screen width.*/
+      .down3 {
+        position: relative; 
+        left: 650px; 
+      }
+
+
+      /*Position second scroll indicator near Birth/Parents header at 744 screen width.*/
+      .arrow3 {
+        position: relative; 
+        left: 650px; 
+      }
+
+      /*Positioon third scroll indicator near end of Children's list at 744 screen width.*/
+      .scroll3 {
+        position: relative; 
+        left: 650px;
+      }
+    }
+
+
+/**********************************************************1024px media query starts now.************************/
+/*Screen Size of desktop starts with 1024px for EGW Page 3*/
+@media screen and (min-width:1024px) {
+
+        /*Push .egwsignature div down to make room for nickname.*/
+        .egwsignature {
+            position: relative; 
+            top: 145px; 
+        }
+
+
+        /*Push egwpic div down to make room for Matriarch and Nickname.*/
+        .egwpic {
+            position: relative; 
+            top: 190px; 
+        }
+    
+        /*Move pic of Eden school to the left of egwpic.*/
+        .eden img {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            top:-250px;
+            left: 52px;
+            margin-left: 2%;
+            width: 275px;
+            height: auto;
+        } 
+
+
+    /*Move eden figcaption to left of egwpic.*/
+        .eden figcaption {
+            position: relative;
+            top: -385px;
+            left: -300px;
+        } 
+    
+    
+        /*Move egwobit div to the left of egwpic.*/
+        .egwobit {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+            top: -700px;
+            left: 680px; 
+            width: 30%; 
+            height: auto; 
+        }
+        
+        /*Reduce dark green background empty space at bottom.*/
+        .greenheader3 {
+            min-height: 400px;
+            margin-bottom: -70%;
+        }
+
+
+        /*Position first scroll indicator near Birth/Parents header for 1024 screen width.*/
+        .down3 {
+            position: relative; 
+            left: 900px; 
+            top: -40px;  
+        }
+
+        /*Position second scroll indicator near Children header for 1024 screen width.*/
+        .arrow3 {
+            position: relative; 
+            left: 900px; 
+        }
+
+        /*Position third scroll indicator near end of Children's list for 1024 screen width.*/
+        .scroll3 {
+            position: relative; 
+            left: 900px; 
+        }
+
+
+    }
+
+
+    /********************************Coding for lula.html page 4 starts here. ********************************************************/
+
+    /* Center h1 header Mary Lula McFadden so McFadden does not go off the page.*/
+#top {
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Add space between nickname and photo of Lula.*/
+.nick {
+    padding-bottom: 5%;
+}
+
+/*Negative margin-bottom on greenheader4 eliminates white gap between lulamain and greenheader4.*/
+/*Negative margin-top eliminates white gap between header nav and .greenheader4.*/
+.greenheader4 {
+    background-color: #1B341e;
+    min-height: 200px; 
+    margin-bottom: -3%;
+    padding-top: 3%;
+    padding-bottom: 8%;
+    margin-top: -5%; 
+}
+
+
+/*Center .lulapic div photo*/
+.lulapic img {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    position: relative; 
+    left: 60px; 
+    padding-bottom: 3%;
+}
+
+/*Format the figcaption in lulapic div.*/
+.lulapic figcaption {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: #d9d9d9;
+    padding-right: 8%;
+    padding-bottom: 3%;
+}
+
+/*Add padding to birth and death dates.*/
+.dates4 {
+    padding-bottom: 5%;
+}
+
+/*Format /position image Lula's marriage certificate.*/
+.lula-mar img{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    padding-left: 5%;
+    position: relative; 
+    left: 60px; 
+}
+
+/*Format /position Lula's marriage certificate figcaption.*/
+.lula-mar figcaption{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: #d9d9d9;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 5%; 
+}
+
+/*Format/position Lula's obit img.*/
+.lulaobit img {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    padding-left: 5%;
+    position: relative; 
+    left: 25px; 
+}
+
+/*Format/position Lula's obit figcaption.*/
+.lulaobit figcaption {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: #d9d9d9;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-bottom: 5%; 
+}
+
+/*Top margin between lulamain and greenheader4.*/
+.lulamain  {
+    margin-top: 5%; 
+}
+
+
+/*Format .down4 scroll indicator next to Birth header. Position it on screen.*/
+.down4 {
+    position: relative; 
+    left: 270px; 
+    bottom: 30px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+}
+
+/*Format the lulamain paragraphs - give right and left margins.*/
+.lulamain p {
+    margin-left: 5%; 
+    margin-right: 5%; 
+}
+
+/*Format/position second scroll-indicator at beginning of kids ordered list.*/
+.arrow4 {
+    position: relative; 
+    left: 270px; 
+    bottom: 30px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    }
+
+/*give right and left margins to lulafamily.*/
+.lulafamily ol {
+    margin-left: 10%; 
+    margin-right: 5%; 
+}
+
+/*Add spacing between indiidual line items of ordered list of Lula's childrens names.*/
+.lulafamily li {
+    padding-bottom: 3%; 
+
+}
+
+/*Format/position third scroll-indicator at end of kids ordered list.*/
+.scroll4 {
+    position: relative; 
+    left: 270px; 
+    bottom: 5px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem; 
+    background-color:#1b341e;
+    color: #A5BF6B;
+    transform: rotate(270deg);
+    }
+
+/*Format / color findagrave link. */
+.lulamain a {
+    margin-left: 5%; 
+    color: #406833; 
+    margin-bottom: 5%; 
+}
+
+.lulamain a:hover {
+    color: #a5bf6b; 
+    background-color: #1b341e;
+}
+
+/*format contact a link.  It was hanging off page at 360 degree screen width before.*/
+.contact4 a {
+    color: #406833;
+    word-wrap: break-word;
+    float: right; 
+    position: relative; 
+    right: -22px; 
+    bottom: 20px; 
+    font-size: 1.5rem; 
+
+}
+
+.contact4 a:hover {
+    color: #a5Bf6B;
+    background-color: #1B341e;
+}
+
+/*Animate Contact Link By Rocking It. Had to reapply to .contact4 vs original .contact.*/
+.contact4 {
+    animation-name: rock-me;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    animation-iteration-count:infinite;    
+   }
+   
+   @keyframes rock-me {
+       from {
+           transform: rotate(-2deg);
+       }
+       to {
+           transform: rotate(2deg);
+       }
+   }
+   
+/***********************************************media queries for lula.html page 4 starts here. All previous commands were for screen width 360.**********************************/
+
+/*Tablet size screen starts at 744px.*/
+@media screen and (min-width:744px) {
+
+    /*Eliminate white gap between grey nav header and .greenheader4.*/
+.greenheader4 { 
+    margin-top: -10%; 
+    padding: 10%; 
+    position: relative; 
+}
+
+/*Postion h1 so it does not cover up daughter and nickname.*/
+.greenheader4 h1 {
+    margin-bottom: 0%; 
+    margin-top: -12%; 
+    padding-bottom: 8px;  
+}
+
+/*Margin to position daughter and nickname so can see it.  It was hidden under h1.*/
+.dau4 {
+    position: relative; 
+    top: 30px; 
+    padding: 5%; 
+    margin-top: 0%; 
+
+} 
+
+/*Move .lulapic img over to the center.*/
+.lulapic img{
+    margin-top: 5%; 
+    position: relative; 
+    left: 180px; 
+
+}
+
+/*Move .lula-mar img over to the center.*/
+.lula-mar img {
+    position: relative; 
+    left: 170px;
+}
+
+/*Move .lulaobit img over to the center.*/
+.lulaobit img {
+    position: relative; 
+    left: 135px; 
+}
+
+/*Remove the white gap between greenheader4 and main by reducing top margin.*/
+main {
+    margin-top: -20%; 
+}
+
+/*Position first scroll indicator near birth/parents header.*/
+.down4 {
+    position: relative; 
+    left: 650px; 
+}
+
+/*Position second scroll indicator near children header.*/
+.arrow4 {
+    position: relative; 
+    left: 650px; 
+}
+
+/*Position third scroll indicator near end of children's ordered list.*/
+.scroll4 {
+    position: relative; 
+    left: 650px; 
+}
+
+/*Expand height of footer to position a links.*/
+#page4 footer {
+    min-height: 180px;
+    width: 107%;
+}
+
+
+/*Move the top a linkdown to center of footer, equal to contact4a link.*/
+.top4 a {
+    font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #406833;
+    position: relative; 
+    top: 6px; 
+}
+
+.top4 a:hover{
+    color: #a5bf6b;
+    background-color: #1b341e;
+}
+
+.contact4 a {
+    position: relative; 
+    right: -15px; 
+}
+
+
+/**********************************************************1024px media query for lula.html page 4 starts now.************************/
+/*Screen Size of desktop starts with 1024px for EGW Page 3*/
+@media screen and (min-width:1024px) {
+
+
+    /*Remove white gap between header/ nav and .greenheader4 with margin-top.*/
+    /*Remove access dark greenheader after positioned images in a row with margin-bottom at 1024px screen width.*/
+    .greenheader4 {
+        margin-top: -15%;
+        margin-bottom: -75%; 
+    }
+
+    /*Center lula's image. */
+    .lulapic img {
+        position: relative; 
+       left: 300px; 
+    }
+
+    /*Center the lulapic figcaption under the picture.*/
+    .lulapic figcaption {
+        position: relative; 
+        left: 17px; 
+    }
+
+    /*Center Lula's marriage certificate image.*/
+    .lula-mar img {
+        float: left;
+        position: relative;
+        left: -65px; 
+        bottom: 400px; 
+    }
+
+    /*Position lula-mar figcaption to the left side of the page.*/
+    .lula-mar figcaption {
+        position: relative; 
+        left: -458px; 
+        bottom: 78px; 
+    }
+
+    /*Center Lula's obit img.*/
+    .lulaobit img {
+        position: relative; 
+        left: 550px; 
+        bottom: 710px; 
+    }
+
+    /*Center/position the Lula's obit's figcaption.*/
+    .lulaobit figcaption {
+        position: relative; 
+        left: 300px; 
+        bottom: 710px; 
+    }
+    /*Position first scroll-indicator over to the right.*/
+    .down4 {
+        position: relative; 
+        left: 870px; 
+    }
+
+       /*Position second scroll-indicator over to the right.*/
+       .arrow4 {
+        position: relative; 
+        left: 870px; 
+    }
+
+       /*Position third scroll-indicator over to the right.*/
+       .scroll4 {
+        position: relative; 
+        left: 870px; 
+    }
+
+    /*Position the top link further in center of footer at 1024 screen width.*/
+    .top4 a {
+        position: relative;
+        top: -20px; 
+    }
+
+    /*Position the contact us here link further in center of footer at 1024 screen width.*/
+    .contact4 a {
+        position: relative; 
+        top: -20px; 
+}
+
+/***********************************Coding for lula.html page 4 ends here.****************************************************/
+
+/**********************************Coding for contact-form.html page 5 starts here.*******************************************/
+/*************************initial code commands for page 5 start at screen width 360px.***************************************/
+   /*Center nav ul. Otherwise it leans to the right. */
+   .main-nav {
+    position: relative; 
+    right: 25px; 
+   }
+
+   /*Check box appeared at 360 and 744 view. The display none setting for #hamburger-check was not working. I had to make opacity 0 to make it disappear.*/
+   /*Normally display none for #hamburger makes checkbox disappear but did not work this time. */
+   /*Opacity Advice from https://stackoverflow.com/questions/17979781/how-can-i-hide-a-checkbox-in-html.*/
+    #hamburger-check {
+        opacity: 0; 
+    }
+   
+    /* BODY */ 
+    #page5 header {
+    background-color: #1b341e;
+    min-width: 75px;
+    margin-bottom: -45%;
+    }
+
+    
+#page5 body{
+    width: 100%;
+    }
+    
+/*Center h1 header for Contact Form.  Can't justify-content, title goes below the dark green area.*/
+    #page5 h1 {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #page5 main{
+        width: 100%;
+        margin: auto;
+        background-color:#A5BF6B;
+        padding: 5%;
+    }
+        
+    /***Format the hamburger menu icon label.****/
+    #page5 label {
+        color: #1b341e;
+        margin-bottom:2%;
+    }
+
+/*Create box around the fieldset. Min-width is for it to fit on mobile screen of 360px width.*/
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid #1B341e;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        min-width: 310px;
+        min-height: 700px; 
+    }
+        
+    legend {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+        
+        
+    #page5 p div {
+        color: black;
+        margin-bottom: 2%;
+    }
+    
+
+/*Format the input labels and display block so can see the labels. Can't see otherwise. They are confused with label earlier in code.*/
+    .view-label {
+        display: block;
+        font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+/*Position First Name label next to input field.*/
+    .fn {
+        position: absolute; 
+        left: 25px; 
+        bottom: 700px; 
+        }
+
+/*Position last name label next to input field.*/
+    .ln {
+        position: absolute;
+        left: 25px; 
+        bottom: 650px; 
+    }
+
+/*Position email address label next to input field.*/
+    .em {
+        position: absolute; 
+        left: 25px; 
+        bottom: 605px; 
+    }
+
+/*Position placeholder text in email field.  Trying to put in middle not at top of input field.*/
+    #email [placeholder] {
+        line-height: 20px;
+        text-align: center;
+        vertical-align: center; 
+        }
+
+
+/*Position message label above textarea field.*/
+    .mes {
+        position: absolute;
+        left: 25px;
+        bottom: 570px; 
+    }
+
+/*Format and position the scroll-indicator on the contact-form.html.*/
+    .scrollcf {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+        top: 32px; 
+        right: -120px; 
+        font-size: 2rem; 
+        background-color:#1b341e;
+        color: #A5BF6B;
+        transform: rotate(270deg);
+
+    }
+
+
+    #page5 input{
+        display:inline-block;
+        color:#000000;
+        background-color: #D9D9D9;
+        width: 62%;
+        padding-left: 5%;
+        padding-bottom: 8%;
+        margin-top: 15%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: -18%;
+        text-align: center;
+        
+    }
+    
+    #page5 textarea{
+        color:#000000;
+        background-color: #D9D9D9;
+        margin-top: 5%;
+        width: 300px;
+    }
+        
+/*Create submit button and position it.*/
+    .submit-form {
+        font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        background-color: #D9D9D9;
+        color: #000000;
+        border: 1px solid #000000;
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-right: 3%;
+        height: 50px;
+        width: 74px;
+        padding: 4%;
+        text-align:center;
+        position: absolute; 
+        left: 25px;
+        top: 600px; 
+    }
+        
+/*Create reset button and position it.*/
+    .reset-form {
+        font-family: 'Fira Sans Condensed', 'Times New Roman', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        background-color: #D9D9D9;
+        color: #000000;
+        border: 1px solid #000000;
+        margin-top: 3%;
+        margin-left: 3%;
+        margin-right: 3%;
+        height: 50px;
+        width: 74px;
+        padding: 4%;
+        text-align:center;
+        position: absolute; 
+        left: 125px;
+        top: 600px; 
+    }
+
+/*Position the Contact Me link at bottom page 5.  It is overlapping with back to top link.*/
+    .contact5 a {
+        color: #406833;
+        margin-right: 8%;
+        position: relative; 
+        left: 144px; 
+        bottom: 24px; 
+    }
+
+    .contact5 a:hover{
+        color: #a5bf6b;
+        background-color: #1b341e;
+    }
+        
+/*Animate Contact Link By Rocking It*/
+    .contact5 {
+        animation-name: rock-me;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-iteration-count:infinite;    
+    }
+   
+    @keyframes rock-me {
+        from {
+            transform: rotate(-2deg);
+        }
+        to {
+            transform: rotate(2deg);
+        }
+    }
+
+/**Footer is not going 100% across bottom of page.**/
+    footer {
+        width: 120%;
+        background-color: #d9d9d9;
+        margin-left: -6%;
+        margin-right: -8%;
+        margin-bottom: -6%;
+    }
+
+/*top5 is back to top link on page 5. Positioning it.*/
+    .top5 a {
+        color: #406833;
+        margin-right: 8%;
+    }
+
+    /*Back to Top Link*/
+    .top a {
+        color: #406833;
+        margin-right: 8%;
+    }
+
+    .top5 a:hover{
+        color: #a5bf6b;
+        background-color: #1b341e;
+    }
+
+/***************************************media queries for contact-form.html page 5 starts here.*****************************/
+/*Tablet size screen starts at 744px. Left h1 images in column format at tablet because could not fit in a row in screen width of 744px.*/
+@media screen and (min-width:744px) {
+    /*Push main nav over to the right more. */
+    .main-nav {
+        position: relative; 
+        left: 20px; 
+    }
+    
+    header {
+        /* border: 2px solid red; */
+        margin-bottom: 20%;
+    }
+
+    #page5 h1 {
+        margin-bottom: 10%; 
+    }
+
+    /*Push main light green section further down so header and nav match.*/
+    #page5 main {
+        position: relative; 
+        top: 200px; 
+    }
+
+    /*Bring the input fields closer together. Push up to the top of the contact information legend.*/
+    #page5 input {
+        margin-bottom: -10%;
+        position: relative; 
+        bottom: 40px; 
+        height: 18px;
+    }
+
+    /*Position the label for first name input field.*/
+    .fn {
+        position: absolute; 
+        bottom: 700px; 
+        left: 30px; 
+    }
+
+    .ln {
+        position: absolute; 
+        bottom: 600px;
+        left: 30px; 
+
+    }
+
+    .em {
+        position: absolute; 
+        bottom: 505px;
+        left: 30px;
+    }
+
+    .mes {
+        position: absolute;
+        bottom: 450px; 
+        left: 30px; 
+    }
+
+    /*Position the scroll-indicator for screen width of 744px.*/
+    .scrollcf {
+        position: relative; 
+        right: -270px;
+        top: -20px; 
+    }
+
+
+    #page5 textarea{
+        width: 75%;
+        position: absolute; 
+        bottom: 230px;
+    }    
+
+    /*Format submit button and position it.*/
+    .submit-form {
+        position: absolute;
+        top: 700px; 
+        left: 110px; 
+        text-align:center;
+        height: 40px; 
+        width: 94px; 
+        padding-right: 10px;
+        padding-left: 10px; 
+      
+    }
+
+    /*Format reset button and position it.*/
+    .reset-form {
+        position: relative;
+        top: 176px; 
+        left: -80px;
+        height: 40px; 
+        width: 94px; 
+        text-align: center;
+        padding-bottom: 34px;
+        padding-right: 10px; 
+        padding-left: 10px; 
+    }
+
+    /*Position contact me link.*/
+    .contact5 a {
+        position: absolute;
+        left: 420px;
+        bottom: 15px;
+    }
+
+    .top5 a {
+        position: absolute;
+        bottom: 35px; 
+    }
+}
+
+/************************************format code for contact-form.html page 5 for desktop screen size.***********************************/
+/*Desktop size screen starts at 1024px. */
+@media screen and (min-width:1024px) { 
+
+    /*Make the h1 visible.*/
+    #page5 h1 {
+        margin-bottom: 25%; 
+    }
+
+    /*Indent beginning paragraph.*/
+    #page5 p {
+        margin-left: 5%;
+    }
+
+    fieldset {
+        min-width: 320px;
+        min-height: 900px; 
+    }
+
+    /*Position first name label.*/
+    .fn {
+        position: absolute; 
+        bottom: 855px; 
+        left: 55px; 
+    }
+
+    /*Position last name label.*/
+    .ln {
+        position: absolute; 
+        bottom: 720px;
+        left: 55px;  
+    }
+    
+    /*Position email label.*/
+    .em {
+        position: absolute; 
+        bottom: 590px;
+        left: 55px;
+    }
+
+    /*Position message label.*/
+    .mes {
+        position: absolute;
+        bottom: 500px; 
+        left: 55px; 
+    }
+
+     /*Position the scroll-indicator for screen width of 744px.*/
+     .scrollcf {
+        position: relative; 
+        top: 40px; 
+        left: 300px; 
+     }
+     
+    /*Move up the textarea area.*/
+    #page5 textarea {
+        width: 65%;
+        position: absolute; 
+        bottom: 290px;
+    }    
+
+    /*Position the submit button.*/
+    .submit-form {
+        position: absolute; 
+        top: 900px; 
+        left: 146px;
+        text-align: center; 
+    }
+
+    /*Position the reset button.*/
+    .reset-form {
+        position: absolute;
+        top: 900px; 
+        left: 280px;
+        padding-bottom: 40px;
+       
+    }
+
+    /*Position the contact us link.*/
+    .contact5 a {
+        position: absolute;
+        left: 640px;
+        bottom: 35px;
+    }
+}  
